@@ -16,16 +16,7 @@ export default function useScreenRecording({
     const [mediaRecorder, setMediaRecorder] = React.useState(null)
     const [isRecording, setIsRecording] = React.useState(false)
     const [recording, setRecording] = React.useState(null)
-    const stopRecording = () => {
-        try {
-            setIsRecording(false)
-            mediaRecorder.stop()
-            captureStream.getTracks().forEach(track => track.stop())
-        } catch (e) {
-            onError(e)
-            setError(e)
-        }
-    }
+
     const startRecording = async () => {
         try {
             const stream = await navigator.mediaDevices.getDisplayMedia(
@@ -50,6 +41,18 @@ export default function useScreenRecording({
             setError(e)
         }
     }
+
+    const stopRecording = () => {
+        try {
+            setIsRecording(false)
+            mediaRecorder.stop()
+            captureStream.getTracks().forEach(track => track.stop())
+        } catch (e) {
+            onError(e)
+            setError(e)
+        }
+    }
+
     const toggleRecording = () => (isRecording ? stopRecording() : startRecording())
 
     return {

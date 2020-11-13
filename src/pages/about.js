@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Container from '../layout/Container'
+import Container from '../layout/container'
 
 export default function About() {
     return (

@@ -5,6 +5,7 @@ module.exports = {
         author: `jhamPac`,
     },
     plugins: [
+        `gatsby-plugin-styled-componetns`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,

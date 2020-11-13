@@ -7,7 +7,5 @@ export default function Container(props) {
 
 const C = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 `

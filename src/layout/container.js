@@ -2,10 +2,24 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 export default function Container(props) {
-    return <C>{props.children}</C>
+    return (
+        <C>
+            <Center>{props.children}</Center>
+        </C>
+    )
 }
 
 const C = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+`
+
+const Center = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
 `

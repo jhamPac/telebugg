@@ -1,39 +1,72 @@
 import * as React from 'react'
 import Container from '../layout/container'
 import styled from 'styled-components'
+import aboutVideo from '../static/ax.mp4'
 
 export default function About() {
     return (
         <Container>
-            <AbouText>
-                <h1>Telebugg 🐛</h1>
+            <Introduction>
+                <h1 style={{ marginBottom: '50px' }}>
+                    Telebugg <span role="img">🐛</span>
+                </h1>
                 <h2>
                     The FRIENDLY software engineering Q & A website for the 21st century
                 </h2>
-            </AbouText>
-            <AboutVideo>
-                <video width="640" height="360" id="player1" preload="none">
-                    <source
-                        type="video/youtube"
-                        src="https://www.youtube.com/watch?v=haejb5rzKsM&feature=emb_logo&ab_channel=ITRevolution"
-                    />
-                </video>
-            </AboutVideo>
+            </Introduction>
+            <Video>
+                <VideoWrapper>
+                    <video controls id="about-player" src={aboutVideo} type="video/mp4" />
+                </VideoWrapper>
+            </Video>
+            <Team>
+                <h2>Meet the team</h2>
+            </Team>
         </Container>
     )
 }
 
-const AbouText = styled.div`
+const Introduction = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media only screen AND (min-width: 768px) {
+    @media screen and (min-width: 769px) {
         width: 75%;
     }
 `
 
-const AboutVideo = styled.div`
+const Video = styled.div`
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
+    width: 100%;
+`
+
+const VideoWrapper = styled.div`
+    width: 100%;
+    height: 400px;
+
+    @media screen and (min-width: 769px) {
+        height: 550px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        height: 650px;
+    }
+
+    @media screen and (min-width: 1201px) {
+        height: 750px;
+    }
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+`
+
+const Team = styled.div`
+    display: flex;
+    flex-direction: column;
     width: 100%;
 `

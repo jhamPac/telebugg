@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Container from '../layout/container'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import aboutVideo from '../static/ax.mp4'
 
@@ -7,9 +8,11 @@ export default function About() {
     return (
         <Container>
             <Introduction>
-                <h1 style={{ marginBottom: '50px' }}>
-                    Telebugg <span role="img">🐛</span>
-                </h1>
+                <Link to="/">
+                    <h1 style={{ marginBottom: '50px' }}>
+                        Telebugg <span role="img">🐛</span>
+                    </h1>
+                </Link>
                 <h2>
                     The FRIENDLY software engineering Q & A website for the 21st century
                 </h2>

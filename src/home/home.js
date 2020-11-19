@@ -5,47 +5,45 @@ import codeSnippet from '../static/codepreview.gif'
 
 const data = [
     {
-        id: '1234567',
+        id: '4892742',
         user: {
             name: 'coderXYZ',
         },
         title:
-            'What is the best approach to desiging a initial state from a server for React formik',
+            'What is the best approach to desiging a initial state from a server for React formik?',
         creation_date: '11/18/20',
         creation_time: '17:30',
         code_gif: codeSnippet,
     },
     {
-        id: '1234567',
+        id: '1213987',
         user: {
-            name: 'coderXYZ',
+            name: 'robbs',
         },
         title:
-            'What is the best approach to desiging a initial state from a server for React formik',
+            'Wonder why is render faster when I invoke this function as opposed to the one in the library?',
         creation_date: '11/18/20',
-        creation_time: '17:30',
+        creation_time: '13:47',
         code_gif: codeSnippet,
     },
     {
-        id: '1234567',
+        id: '54458934',
         user: {
-            name: 'coderXYZ',
+            name: 'errorLover',
         },
-        title:
-            'What is the best approach to desiging a initial state from a server for React formik',
-        creation_date: '11/18/20',
-        creation_time: '17:30',
+        title: 'Can someone explain how this if else is the same as this ternary?',
+        creation_date: '11/17/20',
+        creation_time: '11:05',
         code_gif: codeSnippet,
     },
     {
-        id: '1234567',
+        id: '9098763',
         user: {
-            name: 'coderXYZ',
+            name: 'jhamPac',
         },
-        title:
-            'What is the best approach to desiging a initial state from a server for React formik',
-        creation_date: '11/18/20',
-        creation_time: '17:30',
+        title: 'What makes telebugg so cool?',
+        creation_date: '11/17/20',
+        creation_time: '09:39',
         code_gif: codeSnippet,
     },
 ]
@@ -64,8 +62,8 @@ export default function Home() {
                 </div>
             </ControlContainer>
             <QuestionContainer>
-                {data.map((d, i) => (
-                    <Question key={d.id + i} question={d} />
+                {data.map(d => (
+                    <Question key={d.id} question={d} />
                 ))}
             </QuestionContainer>
         </H>

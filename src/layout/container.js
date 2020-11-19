@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Navbar from './navbar'
 import styled from 'styled-components'
 
 export default function Container(props) {

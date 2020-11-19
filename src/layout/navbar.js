@@ -7,7 +7,10 @@ export default function Navbar() {
         <N>
             <Link to="/">
                 <h3>
-                    Telebugg <span role="img">🐛</span>
+                    Telebugg{' '}
+                    <span role="img" aria-label="emoji of a bug">
+                        🐛
+                    </span>
                 </h3>
             </Link>
             <Link to="/about">

@@ -8,7 +8,7 @@ export default function Question({ question }) {
                 <h4>{question.title}</h4>
             </div>
             <CodeSnippet>
-                <img src={question.code_gif} />
+                <img src={question.code_gif} alt="" />
             </CodeSnippet>
             <div>
                 <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>

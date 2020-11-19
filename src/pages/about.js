@@ -10,7 +10,10 @@ export default function About() {
             <Introduction>
                 <Link to="/">
                     <h1 style={{ marginBottom: '50px' }}>
-                        Telebugg <span role="img">🐛</span>
+                        Telebugg{' '}
+                        <span role="img" aria-label="emoji of a bug">
+                            🐛
+                        </span>
                     </h1>
                 </Link>
                 <h2>

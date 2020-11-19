@@ -1,7 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Question from './question'
-import codeSnippet from '../static/codepreview.gif'
+
+// gif
+import cp from '../static/cp.gif'
+import cp2 from '../static/cp2.gif'
+import cp3 from '../static/cp3.gif'
+import cp5 from '../static/cp5.gif'
 
 const data = [
     {
@@ -13,38 +18,38 @@ const data = [
             'What is the best approach to desiging a initial state from a server for React formik?',
         creation_date: '11/18/20',
         creation_time: '17:30',
-        code_gif: codeSnippet,
+        code_gif: cp,
     },
     {
         id: '1213987',
         user: {
             name: 'sushee',
         },
-        title:
-            'Wonder why is render faster when I invoke this function as opposed to the one in the library?',
+        title: 'Need to just copy over part of slice.',
         creation_date: '11/18/20',
         creation_time: '13:47',
-        code_gif: codeSnippet,
+        code_gif: cp2,
     },
     {
         id: '54458934',
         user: {
             name: 'errorLover',
         },
-        title: 'Can someone explain how this if else is the same as this ternary?',
+        title: 'How do you filter by background calls, sorry english is not so good.',
         creation_date: '11/17/20',
         creation_time: '11:05',
-        code_gif: codeSnippet,
+        code_gif: cp3,
     },
     {
         id: '9098763',
         user: {
             name: 'jhamPac',
         },
-        title: 'What makes telebugg so cool?',
+        title:
+            'How do you align the heights of wrapper containers around images? Should I even use an img tag?',
         creation_date: '11/17/20',
         creation_time: '09:39',
-        code_gif: codeSnippet,
+        code_gif: cp5,
     },
 ]
 

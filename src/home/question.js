@@ -1,22 +1,18 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import codeSnippet from '../static/codepreview.gif'
 
-export default function Question(props) {
+export default function Question({ question }) {
     return (
         <Box>
             <div>
-                <h4>
-                    What is the best approach to desiging a initial state from a server
-                    for React formik
-                </h4>
+                <h4>{question.title}</h4>
             </div>
             <CodeSnippet>
-                <img src={codeSnippet} />
+                <img src={question.code_gif} />
             </CodeSnippet>
             <div>
-                <p style={{ marginBottom: '0px' }}>user: coderxyz</p>
-                <p>posted: 11/8/20 @ 17:30</p>
+                <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>
+                <p>{`posted: ${question.creation_date} @ ${question.creation_time}`}</p>
             </div>
             <div>
                 <button>View</button>

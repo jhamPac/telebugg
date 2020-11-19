@@ -12,7 +12,7 @@ export default function Question({ question }) {
             </CodeSnippet>
             <div>
                 <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>
-                <p>{`posted: ${question.creationDate} @ ${question.creationTime}`}</p>
+                <p>{`posted: ${question.createDate} @ ${question.createTime}`}</p>
             </div>
             <div>
                 <button>View</button>

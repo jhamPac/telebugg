@@ -8,11 +8,11 @@ export default function Question({ question }) {
                 <h4>{question.title}</h4>
             </div>
             <CodeSnippet>
-                <img src={question.code_gif} alt="" />
+                <img src={question.codePreview} alt="" />
             </CodeSnippet>
             <div>
                 <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>
-                <p>{`posted: ${question.creation_date} @ ${question.creation_time}`}</p>
+                <p>{`posted: ${question.creationDate} @ ${question.creationTime}`}</p>
             </div>
             <div>
                 <button>View</button>

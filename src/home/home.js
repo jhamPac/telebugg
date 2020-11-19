@@ -18,7 +18,7 @@ const data = [
     {
         id: '1213987',
         user: {
-            name: 'robbs',
+            name: 'sushee',
         },
         title:
             'Wonder why is render faster when I invoke this function as opposed to the one in the library?',

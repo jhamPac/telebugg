@@ -41,6 +41,7 @@ module.exports = {
             options: {
                 alias: {
                     '@layout': path.resolve(__dirname, 'src/layout'),
+                    '@media': path.resolve(__dirname, 'src/media'),
                 },
                 extensions: ['js'],
             },

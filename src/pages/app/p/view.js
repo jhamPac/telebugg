@@ -15,8 +15,8 @@ export default function PView(props) {
                     <input id="title" name="title" />
                 </div>
                 <div>
-                    <label htmlFor="description">Title</label>
-                    <textarea id="description" name="title" />
+                    <label htmlFor="description">Helpful notes</label>
+                    <textarea id="description" name="title" style={{ height: '256px' }} />
                 </div>
             </InputsContainer>
             <SRContainer>
@@ -57,6 +57,7 @@ const InputsContainer = styled.div`
     input,
     textarea {
         display: inline-block;
+        width: 100%;
     }
 
     input {

@@ -7,6 +7,7 @@ import cp from '../../static/cp.gif'
 import cp2 from '../../static/cp2.gif'
 import cp3 from '../../static/cp3.gif'
 import cp5 from '../../static/cp5.gif'
+import { navigate } from 'gatsby'
 
 const data = [
     {
@@ -58,7 +59,9 @@ export default function Home() {
         <div id="home-view">
             <ButtonsContainer>
                 <div>
-                    <button>Post a question</button>
+                    <button onClick={e => navigate('/app/p/view')}>
+                        Post a question
+                    </button>
                 </div>
                 <div>
                     <button>Newest</button>

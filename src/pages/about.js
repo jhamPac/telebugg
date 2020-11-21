@@ -9,8 +9,8 @@ export default function About() {
         <Container>
             <Introduction>
                 <Link to="/">
-                    <h1 style={{ marginBottom: '50px' }}>
-                        Telebugg{' '}
+                    <h1 style={{ display: 'inline-block', marginBottom: '50px' }}>
+                        Telebugg
                         <span role="img" aria-label="emoji of a bug">
                             🐛
                         </span>
@@ -27,14 +27,6 @@ export default function About() {
             </Video>
             <Team>
                 <h2>Meet the team</h2>
-                <Link to="/">
-                    <h1 style={{ marginBottom: '50px' }}>
-                        Telebugg{' '}
-                        <span role="img" aria-label="emoji of a bug">
-                            🐛
-                        </span>
-                    </h1>
-                </Link>
             </Team>
         </Container>
     )

@@ -3,7 +3,7 @@ import Container from '../layout/container'
 import Navbar from '../layout/navbar'
 import Home from '../home/home'
 
-export default function App() {
+export default function Main() {
     return (
         <Container>
             <Navbar />

@@ -55,8 +55,8 @@ const data = [
 
 export default function Home() {
     return (
-        <H>
-            <ControlContainer>
+        <div id="home-view">
+            <ButtonsContainer>
                 <div>
                     <button>Post a question</button>
                 </div>
@@ -65,24 +65,17 @@ export default function Home() {
                     <button>Trending</button>
                     <button>Month</button>
                 </div>
-            </ControlContainer>
-            <QuestionContainer>
+            </ButtonsContainer>
+            <QuestionsContainer>
                 {data.map(d => (
                     <Question key={d.id} question={d} />
                 ))}
-            </QuestionContainer>
-        </H>
+            </QuestionsContainer>
+        </div>
     )
 }
 
-const H = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`
-
-const ControlContainer = styled.div`
+const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -91,7 +84,7 @@ const ControlContainer = styled.div`
     width: 100%;
 `
 
-const QuestionContainer = styled.div`
+const QuestionsContainer = styled.div`
     display: flex;
     flex-direction: column;
 

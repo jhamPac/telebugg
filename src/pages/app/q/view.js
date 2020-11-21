@@ -11,5 +11,5 @@ export default function QView(props) {
         }
     }, [props.location.path])
 
-    return redirect ? null : <div>Question View</div>
+    return redirect ? null : <div id="question-view">Question View</div>
 }

@@ -27,6 +27,14 @@ export default function About() {
             </Video>
             <Team>
                 <h2>Meet the team</h2>
+                <Link to="/">
+                    <h1 style={{ marginBottom: '50px' }}>
+                        Telebugg{' '}
+                        <span role="img" aria-label="emoji of a bug">
+                            🐛
+                        </span>
+                    </h1>
+                </Link>
             </Team>
         </Container>
     )

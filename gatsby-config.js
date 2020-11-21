@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
     siteMetadata: {
         title: `Telebugg`,
@@ -32,6 +34,15 @@ module.exports = {
             resolve: `gatsby-plugin-typography`,
             options: {
                 pathToConfigModule: `src/util/typography`,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-alias-imports`,
+            options: {
+                alias: {
+                    '@layout': path.resolve(__dirname, 'src/layout'),
+                },
+                extensions: ['js'],
             },
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality

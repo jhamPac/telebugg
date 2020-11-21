@@ -7,7 +7,7 @@ import aboutVideo from '../../static/ax.mp4'
 export default function About() {
     return (
         <Container>
-            <Introduction>
+            <div>
                 <Link to="/">
                     <h1 style={{ display: 'inline-block', marginBottom: '50px' }}>
                         Telebugg
@@ -19,12 +19,12 @@ export default function About() {
                 <h2>
                     The FRIENDLY software engineering Q & A website for the 21st century
                 </h2>
-            </Introduction>
-            <Video>
-                <VideoWrapper>
+            </div>
+            <VideoWrapper>
+                <Video>
                     <video controls id="about-player" src={aboutVideo} type="video/mp4" />
-                </VideoWrapper>
-            </Video>
+                </Video>
+            </VideoWrapper>
             <Team>
                 <h2>Meet the team</h2>
             </Team>
@@ -32,16 +32,14 @@ export default function About() {
     )
 }
 
-const Introduction = styled.div``
-
-const Video = styled.div`
+const VideoWrapper = styled.div`
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;
     width: 100%;
 `
 
-const VideoWrapper = styled.div`
+const Video = styled.div`
     width: 100%;
     height: 400px;
 

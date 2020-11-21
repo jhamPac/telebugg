@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export default function Question({ question }) {
     return (
@@ -15,7 +16,9 @@ export default function Question({ question }) {
                 <p>{`posted: ${question.createDate} @ ${question.createTime}`}</p>
             </div>
             <div>
-                <button>View</button>
+                <Link to="/app/q/view" state={{ questionID: question.id }}>
+                    <button style={{ cursor: 'pointer' }}>view</button>
+                </Link>
             </div>
         </Box>
     )

@@ -1,13 +1,15 @@
 import * as React from 'react'
+import { navigate } from 'gatsby'
 
 export default function QView(props) {
-    const [showRedirect, setShowRedirect] = React.useState(false)
+    const [redirect, setRedirect] = React.useState(false)
 
     React.useEffect(() => {
         if (props.location.state === null) {
-            setShowRedirect(true)
+            setRedirect(true)
+            navigate('/')
         }
     }, [props.location.path])
 
-    return showRedirect ? <div>Go ask a question</div> : <div>blah</div>
+    return redirect ? null : <div>Question View</div>
 }

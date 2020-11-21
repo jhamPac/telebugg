@@ -32,14 +32,7 @@ export default function About() {
     )
 }
 
-const Introduction = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (min-width: 769px) {
-        width: 75%;
-    }
-`
+const Introduction = styled.div``
 
 const Video = styled.div`
     display: flex;

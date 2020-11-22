@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Question from './question'
 
 // gif
-import cp from '../../static/cp.gif'
-import cp2 from '../../static/cp2.gif'
-import cp3 from '../../static/cp3.gif'
-import cp5 from '../../static/cp5.gif'
+import cp from '../../assets/cp.gif'
+import cp2 from '../../assets/cp2.gif'
+import cp3 from '../../assets/cp3.gif'
+import cp5 from '../../assets/cp5.gif'
 import { navigate } from 'gatsby'
 
 const data = [

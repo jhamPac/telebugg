@@ -23,9 +23,11 @@ export default function About() {
                 <Video>
                     <iframe
                         src="https://player.vimeo.com/video/482348946"
-                        frameborder="0"
-                        allow="fullscreen"
-                        allowfullscreen
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        frameBorder="0"
+                        webkitallowfullscreen="true"
+                        mozallowfullscreen="true"
+                        allowFullScreen
                     ></iframe>
                 </Video>
             </VideoWrapper>

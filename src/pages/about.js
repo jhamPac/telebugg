@@ -2,7 +2,6 @@ import * as React from 'react'
 import Container from '../layout/container'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import aboutVideo from '../../static/ax.mp4'
 
 export default function About() {
     return (

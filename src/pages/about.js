@@ -22,7 +22,12 @@ export default function About() {
             </div>
             <VideoWrapper>
                 <Video>
-                    <video controls id="about-player" src={aboutVideo} type="video/mp4" />
+                    <iframe
+                        src="https://player.vimeo.com/video/482348946"
+                        frameborder="0"
+                        allow="fullscreen"
+                        allowfullscreen
+                    ></iframe>
                 </Video>
             </VideoWrapper>
             <Team>
@@ -55,7 +60,7 @@ const Video = styled.div`
         height: 750px;
     }
 
-    video {
+    iframe {
         object-fit: cover;
         width: 100%;
         height: 100%;

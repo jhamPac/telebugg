@@ -9,7 +9,24 @@ export default function Question({ question }) {
                 <h4>{question.title}</h4>
             </div>
             <CodeSnippet>
-                <img src={question.codePreview} alt="" />
+                <div
+                    style={{
+                        width: '100%',
+                        height: '0',
+                        paddingBottom: '75%',
+                        position: 'relative',
+                    }}
+                >
+                    <iframe
+                        src="https://giphy.com/embed/jWkSx6KZcoT12BCkfg"
+                        width="100%"
+                        height="100%"
+                        style={{ position: 'absolute' }}
+                        frameBorder="0"
+                        class="giphy-embed"
+                        allowFullScreen
+                    ></iframe>
+                </div>
             </CodeSnippet>
             <div>
                 <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>

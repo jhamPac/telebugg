@@ -2,12 +2,9 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Question from './question'
 
-// gif
-import cp from '../../assets/cp.gif'
-import cp2 from '../../assets/cp2.gif'
-import cp3 from '../../assets/cp3.gif'
-import cp5 from '../../assets/cp5.gif'
 import { navigate } from 'gatsby'
+
+const gifURL = 'https://gph.is/g/EGKDgQ3'
 
 const data = [
     {
@@ -19,7 +16,7 @@ const data = [
             'What is the best approach to desiging a initial state from a server for React formik?',
         createDate: '11/18/20',
         createTime: '17:30',
-        codePreview: cp,
+        codePreview: gifURL,
     },
     {
         id: '1213987',
@@ -29,7 +26,7 @@ const data = [
         title: 'Need to just copy over part of slice.',
         createDate: '11/18/20',
         createTime: '13:47',
-        codePreview: cp2,
+        codePreview: gifURL,
     },
     {
         id: '54458934',
@@ -39,7 +36,7 @@ const data = [
         title: 'How do you filter by background calls, sorry english is not so good.',
         createDate: '11/17/20',
         createTime: '11:05',
-        codePreview: cp3,
+        codePreview: gifURL,
     },
     {
         id: '9098763',
@@ -50,7 +47,7 @@ const data = [
             'How do you align the heights of wrapper containers around images? Should I even use an img tag?',
         createDate: '11/17/20',
         createTime: '09:39',
-        codePreview: cp5,
+        codePreview: gifURL,
     },
 ]
 

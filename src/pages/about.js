@@ -22,12 +22,10 @@ export default function About() {
             <VideoWrapper>
                 <Video>
                     <iframe
-                        src="https://player.vimeo.com/video/482348946"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        frameBorder="0"
-                        webkitallowfullscreen="true"
-                        mozallowfullscreen="true"
-                        allowFullScreen
+                        src="https://www.youtube.com/embed/nhhfFR6SQRU"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
                     ></iframe>
                 </Video>
             </VideoWrapper>
@@ -47,7 +45,6 @@ const VideoWrapper = styled.div`
 
 const Video = styled.div`
     width: 100%;
-    height: 400px;
 
     @media screen and (min-width: 769px) {
         height: 550px;

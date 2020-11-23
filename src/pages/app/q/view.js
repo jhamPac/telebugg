@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 import Container from '@layout/container'
+import Navbar from '@layout/navbar'
 
 export default function QView(props) {
     const [redirect, setRedirect] = React.useState(false)
@@ -14,7 +15,13 @@ export default function QView(props) {
 
     return redirect ? null : (
         <Container>
-            <div id="question-view">Question View</div>
+            <Navbar />
+            <div id="question-view">
+                Question View under construction{' '}
+                <span role="img" aria-label="emoji of construction sign">
+                    🚧
+                </span>
+            </div>
         </Container>
     )
 }

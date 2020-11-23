@@ -8,26 +8,24 @@ export default function Question({ question }) {
             <div>
                 <h4>{question.title}</h4>
             </div>
-            <CodeSnippet>
-                <div
-                    style={{
-                        width: '100%',
-                        height: '0',
-                        paddingBottom: '75%',
-                        position: 'relative',
-                    }}
-                >
-                    <iframe
-                        src={question.src}
-                        width="100%"
-                        height="100%"
-                        style={{ position: 'absolute' }}
-                        frameBorder="0"
-                        class="giphy-embed"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-            </CodeSnippet>
+            <div
+                style={{
+                    width: '100%',
+                    height: '0',
+                    paddingBottom: '75%',
+                    position: 'relative',
+                }}
+            >
+                <iframe
+                    src={question.src}
+                    width="100%"
+                    height="100%"
+                    style={{ position: 'absolute' }}
+                    frameBorder="0"
+                    class="giphy-embed"
+                    allowFullScreen
+                ></iframe>
+            </div>
             <div>
                 <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>
                 <p>{`posted: ${question.createDate} @ ${question.createTime}`}</p>
@@ -55,11 +53,5 @@ const Box = styled.div`
     @media screen and (min-width: 769px) {
         width: 30%;
         margin-right: 3%;
-    }
-`
-
-const CodeSnippet = styled.div`
-    img {
-        object-fit: contain;
     }
 `

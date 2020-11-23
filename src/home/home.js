@@ -4,8 +4,6 @@ import Question from './question'
 
 import { navigate } from 'gatsby'
 
-const gifURL = 'https://giphy.com/embed/8wkYBm16JtsjVNqKeH'
-
 const data = [
     {
         id: '4892742',
@@ -16,7 +14,7 @@ const data = [
             'What is the best approach to desiging a initial state from a server for React formik?',
         createDate: '11/18/20',
         createTime: '17:30',
-        src: gifURL,
+        src: 'https://giphy.com/embed/8wkYBm16JtsjVNqKeH',
     },
     {
         id: '1213987',
@@ -26,7 +24,7 @@ const data = [
         title: 'Need to just copy over part of slice.',
         createDate: '11/18/20',
         createTime: '13:47',
-        src: gifURL,
+        src: 'https://giphy.com/embed/hm3Y0N0X5ZiVBrccRN',
     },
     {
         id: '54458934',
@@ -36,7 +34,7 @@ const data = [
         title: 'How do you filter by background calls, sorry english is not so good.',
         createDate: '11/17/20',
         createTime: '11:05',
-        src: gifURL,
+        src: 'https://giphy.com/embed/JUcnk9GErfkIkKtAns',
     },
     {
         id: '9098763',
@@ -47,7 +45,7 @@ const data = [
             'How do you align the heights of wrapper containers around images? Should I even use an img tag?',
         createDate: '11/17/20',
         createTime: '09:39',
-        src: gifURL,
+        src: 'https://giphy.com/embed/PC1NRqW1OLhVH0MAna',
     },
 ]
 

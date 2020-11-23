@@ -18,7 +18,7 @@ export default function Question({ question }) {
                     }}
                 >
                     <iframe
-                        src="https://giphy.com/embed/jWkSx6KZcoT12BCkfg"
+                        src="https://giphy.com/embed/8wkYBm16JtsjVNqKeH"
                         width="100%"
                         height="100%"
                         style={{ position: 'absolute' }}

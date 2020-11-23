@@ -59,7 +59,6 @@ const Video = styled.div`
     }
 
     iframe {
-        object-fit: cover;
         width: 100%;
         height: 100%;
     }

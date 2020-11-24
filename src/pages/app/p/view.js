@@ -1,14 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import Container from '@layout/container'
-import Navbar from '@layout/navbar'
 import useMediaRecorder from '@media/useMediaRecorder'
 
 export default function PView(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
     return (
-        <Container>
-            <Navbar />
+        <div id="post-view">
             <InputsContainer>
                 <div>
                     <label htmlFor="title">Title</label>
@@ -41,7 +38,7 @@ export default function PView(props) {
                     </Video>
                 </VideoWrapper>
             </SRContainer>
-        </Container>
+        </div>
     )
 }
 

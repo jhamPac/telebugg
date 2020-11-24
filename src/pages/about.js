@@ -1,20 +1,11 @@
 import * as React from 'react'
-import Container from '../layout/container'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 export default function About() {
     return (
-        <Container>
+        <div id="about">
             <div>
-                <Link to="/">
-                    <h1 style={{ display: 'inline-block', marginBottom: '50px' }}>
-                        Telebugg
-                        <span role="img" aria-label="emoji of a bug">
-                            🐛
-                        </span>
-                    </h1>
-                </Link>
                 <h2>
                     The FRIENDLY software engineering Q & A website for the 21st century
                 </h2>
@@ -32,7 +23,7 @@ export default function About() {
             <Team>
                 <h2>Meet the team</h2>
             </Team>
-        </Container>
+        </div>
     )
 }
 

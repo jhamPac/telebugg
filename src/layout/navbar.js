@@ -26,4 +26,8 @@ const N = styled.nav`
     justify-content: space-between;
     align-items: center;
     height: 64px;
+
+    a {
+        color: #f8f8f2;
+    }
 `

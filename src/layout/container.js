@@ -10,6 +10,8 @@ export default function Container(props) {
 }
 
 const C = styled.div`
+    background: #44475a;
+    color: #f8f8f2;
     display: flex;
     flex-direction: column;
     padding: 15px;

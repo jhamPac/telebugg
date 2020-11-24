@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 export default function About() {
@@ -13,6 +12,7 @@ export default function About() {
             <VideoWrapper>
                 <Video>
                     <iframe
+                        title="about-video"
                         src="https://www.youtube.com/embed/nhhfFR6SQRU"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -17,12 +17,13 @@ export default function Question({ question }) {
                 }}
             >
                 <iframe
+                    title="question-iframe"
                     src={question.src}
                     width="100%"
                     height="100%"
                     style={{ position: 'absolute' }}
                     frameBorder="0"
-                    class="giphy-embed"
+                    className="giphy-embed"
                     allowFullScreen
                 ></iframe>
             </div>

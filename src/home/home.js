@@ -80,6 +80,10 @@ const ButtonsContainer = styled.div`
     margin-top: 32px;
     margin-bottom: 64px;
     width: 100%;
+
+    button {
+        cursor: pointer;
+    }
 `
 
 const QuestionsContainer = styled.div`

@@ -29,5 +29,6 @@ const N = styled.nav`
 
     a {
         color: #f8f8f2;
+        text-decoration: none;
     }
 `

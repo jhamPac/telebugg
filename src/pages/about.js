@@ -13,7 +13,7 @@ export default function About() {
                 <Video>
                     <iframe
                         title="about-video"
-                        src="https://www.youtube.com/embed/nhhfFR6SQRU"
+                        src="https://player.vimeo.com/video/482348946"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen

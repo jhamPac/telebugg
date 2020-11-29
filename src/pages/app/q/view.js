@@ -8,9 +8,6 @@ export default function QView(props) {
     const [redirect, setRedirect] = React.useState(false)
 
     React.useEffect(() => {
-        if (typeof window === 'undefined') {
-            return
-        }
         // we can pass the question or fetch it here with the id
         if (props.location.state === null) {
             setRedirect(true)
@@ -19,6 +16,10 @@ export default function QView(props) {
     }, [props.location.state])
 
     const render = question => {
+        if (question === undefined) {
+            return null
+        }
+
         return (
             <div id="question-view" style={{ paddingTop: '16px' }}>
                 <h2>{question.title}</h2>
@@ -44,7 +45,7 @@ export default function QView(props) {
         )
     }
 
-    return redirect ? null : render(props.location.state.question)
+    return redirect ? null : render(props.location?.state?.question)
 }
 
 const Video = styled.div`

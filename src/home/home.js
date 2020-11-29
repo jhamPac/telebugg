@@ -12,6 +12,7 @@ const data = [
         },
         title:
             'What is the best approach to desiging a initial state from a server for React formik?',
+        notes: 'React v16.10, speaks Mandarin',
         createDate: '11/18/20',
         createTime: '17:30',
         src: 'https://giphy.com/embed/8wkYBm16JtsjVNqKeH',
@@ -22,6 +23,7 @@ const data = [
             name: 'sushee',
         },
         title: 'Need to just copy over part of slice.',
+        notes: 'New to JavaScript, I do have a background in PHP',
         createDate: '11/18/20',
         createTime: '13:47',
         src: 'https://giphy.com/embed/hm3Y0N0X5ZiVBrccRN',
@@ -32,6 +34,7 @@ const data = [
             name: 'errorLover',
         },
         title: 'How do you filter by background calls, sorry english is not so good.',
+        notes: 'getting a bunch of errors in Node',
         createDate: '11/17/20',
         createTime: '11:05',
         src: 'https://giphy.com/embed/JUcnk9GErfkIkKtAns',
@@ -43,6 +46,7 @@ const data = [
         },
         title:
             'How do you align the heights of wrapper containers around images? Should I even use an img tag?',
+        notes: 'open to any framework or ideas',
         createDate: '11/17/20',
         createTime: '09:39',
         src: 'https://giphy.com/embed/PC1NRqW1OLhVH0MAna',

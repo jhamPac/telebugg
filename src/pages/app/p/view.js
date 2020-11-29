@@ -13,8 +13,13 @@ export default function PView(props) {
                     <input id="title" name="title" />
                 </div>
                 <div>
-                    <label htmlFor="description">Body</label>
-                    <textarea id="description" name="title" style={{ height: '256px' }} />
+                    <label htmlFor="description">Helpful notes if any</label>
+                    <textarea
+                        placeholder="for exmaple: React version, native language"
+                        id="notes"
+                        name="title"
+                        style={{ height: '128px' }}
+                    />
                 </div>
             </InputsContainer>
             <CodeBlock>

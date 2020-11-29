@@ -15,8 +15,7 @@ export default function QView(props) {
         }
     }, [props.location.state])
 
-    const renderPage = () => {
-        const { question } = props.location?.state || {}
+    const render = question => {
         return (
             <div id="question-view" style={{ paddingTop: '16px' }}>
                 <h2>{question.title}</h2>
@@ -42,7 +41,7 @@ export default function QView(props) {
         )
     }
 
-    return redirect ? null : renderPage()
+    return redirect ? null : render(props.location.state.question)
 }
 
 const Video = styled.div`

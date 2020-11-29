@@ -34,7 +34,7 @@ const data = [
             name: 'errorLover',
         },
         title: 'How do you filter by background calls, sorry english is not so good.',
-        notes: 'getting a bunch of errors in Node',
+        notes: 'Hindi navtive speaker',
         createDate: '11/17/20',
         createTime: '11:05',
         src: 'https://giphy.com/embed/JUcnk9GErfkIkKtAns',

@@ -32,6 +32,9 @@ export default function QView(props) {
                 <Body>
                     <h3>Notes</h3>
                     <p>{question.notes}</p>
+                </Body>
+                <CodeBlock>
+                    <h3>Code Block</h3>
                     <iframe
                         src="https://codesandbox.io/embed/happy-curie-ok3i4?fontsize=14&hidenavigation=1&theme=dark&view=editor"
                         style={{ width: '100%', height: '500px', overflow: 'hidden' }}
@@ -39,8 +42,7 @@ export default function QView(props) {
                         allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
                         sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
                     ></iframe>
-                </Body>
-
+                </CodeBlock>
                 <Replies>
                     <h2>Replies</h2>
                     <ReplyRow />
@@ -54,7 +56,7 @@ export default function QView(props) {
 }
 
 const Video = styled.div`
-    margin-bottom: 32px;
+    margin-bottom: 8px;
     width: 100%;
 
     @media screen and (min-width: 769px) {
@@ -82,6 +84,11 @@ const Body = styled.div`
     p {
         font-size: 18px;
     }
+`
+
+const CodeBlock = styled.div`
+    margin-top: 64px;
+    margin-bottom: 64px;
 `
 
 const Replies = styled.div`

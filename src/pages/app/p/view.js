@@ -5,19 +5,31 @@ import useMediaRecorder from '@media/useMediaRecorder'
 export default function PView(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
     return (
-        <div id="post-view" style={{ height: '100vh' }}>
+        <div id="post-view">
+            <h2>Ask a question</h2>
             <InputsContainer>
                 <div>
                     <label htmlFor="title">Title</label>
                     <input id="title" name="title" />
                 </div>
                 <div>
-                    <label htmlFor="description">Helpful notes</label>
+                    <label htmlFor="description">Body</label>
                     <textarea id="description" name="title" style={{ height: '256px' }} />
                 </div>
             </InputsContainer>
+            <CodeBlock>
+                <h2>Code block</h2>
+                <iframe
+                    src="https://codesandbox.io/embed/happy-curie-ok3i4?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+                    style={{ width: '100%', height: '500px', overflow: 'hidden' }}
+                    title="happy-curie-ok3i4"
+                    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                ></iframe>
+            </CodeBlock>
             <SRContainer>
                 <div style={{ marginBottom: '32px' }}>
+                    <h2>Record a screen share for better context</h2>
                     <button
                         onClick={toggleRecording}
                         style={{ display: 'inline-block', marginRight: '8px' }}
@@ -66,6 +78,10 @@ const InputsContainer = styled.div`
 `
 
 const SRContainer = styled.div`
+    margin-top: 64px;
+`
+
+const CodeBlock = styled.div`
     margin-top: 64px;
 `
 

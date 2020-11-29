@@ -32,7 +32,7 @@ export default function Question({ question }) {
                 <p>{`posted: ${question.createDate} @ ${question.createTime}`}</p>
             </div>
             <div>
-                <Link to="/app/q/view" state={{ questionID: question.id }}>
+                <Link to="/app/q/view" state={{ question }}>
                     <button style={{ cursor: 'pointer' }}>view</button>
                 </Link>
             </div>

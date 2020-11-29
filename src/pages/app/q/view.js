@@ -16,7 +16,7 @@ export default function QView(props) {
     }, [props.location.state])
 
     const renderPage = () => {
-        const { question } = props.location.state
+        const { question } = props.location?.state || {}
         return (
             <div id="question-view" style={{ paddingTop: '16px' }}>
                 <h2>{question.title}</h2>

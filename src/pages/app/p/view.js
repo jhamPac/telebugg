@@ -5,7 +5,7 @@ import useMediaRecorder from '@media/useMediaRecorder'
 export default function PView(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
     return (
-        <div id="post-view">
+        <div id="post-view" style={{ height: '100vh' }}>
             <InputsContainer>
                 <div>
                     <label htmlFor="title">Title</label>
@@ -27,16 +27,14 @@ export default function PView(props) {
                     <button>Remove</button>
                 </div>
 
-                <VideoWrapper>
-                    <Video>
-                        {recording !== null ? (
-                            <video
-                                autoPlay
-                                src={recording && window.URL.createObjectURL(recording)}
-                            />
-                        ) : null}
-                    </Video>
-                </VideoWrapper>
+                <Video>
+                    {recording !== null ? (
+                        <video
+                            autoPlay
+                            src={recording && window.URL.createObjectURL(recording)}
+                        />
+                    ) : null}
+                </Video>
             </SRContainer>
         </div>
     )
@@ -71,23 +69,8 @@ const SRContainer = styled.div`
     margin-top: 64px;
 `
 
-const VideoWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
-    width: 100%;
-`
-
 const Video = styled.div`
     width: 100%;
-
-    @media screen and (min-width: 769px) {
-        height: 550px;
-    }
-
-    @media screen and (min-width: 1025px) {
-        height: 650px;
-    }
 
     video {
         object-fit: contain;

@@ -8,6 +8,9 @@ export default function QView(props) {
     const [redirect, setRedirect] = React.useState(false)
 
     React.useEffect(() => {
+        if (typeof window === 'undefined') {
+            return
+        }
         // we can pass the question or fetch it here with the id
         if (props.location.state === null) {
             setRedirect(true)

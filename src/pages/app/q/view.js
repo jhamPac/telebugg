@@ -33,16 +33,6 @@ export default function QView(props) {
                     <h3>Notes</h3>
                     <p>{question.notes}</p>
                 </Body>
-                <CodeBlock>
-                    <h3>Code Block</h3>
-                    <iframe
-                        src="https://codesandbox.io/embed/happy-curie-ok3i4?fontsize=14&hidenavigation=1&theme=dark&view=editor"
-                        style={{ width: '100%', height: '500px', overflow: 'hidden' }}
-                        title="happy-curie-ok3i4"
-                        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-                    ></iframe>
-                </CodeBlock>
                 <Replies>
                     <h2>Replies</h2>
                     <ReplyRow />
@@ -79,16 +69,11 @@ const Video = styled.div`
 
 const Body = styled.div`
     color: #f1fa8c;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
 
     p {
         font-size: 18px;
     }
-`
-
-const CodeBlock = styled.div`
-    margin-top: 64px;
-    margin-bottom: 64px;
 `
 
 const Replies = styled.div`

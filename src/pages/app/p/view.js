@@ -80,7 +80,6 @@ const VideoWrapper = styled.div`
 
 const Video = styled.div`
     width: 100%;
-    height: 400px;
 
     @media screen and (min-width: 769px) {
         height: 550px;
@@ -90,13 +89,14 @@ const Video = styled.div`
         height: 650px;
     }
 
-    @media screen and (min-width: 1201px) {
-        height: 750px;
-    }
-
     video {
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
         height: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 640px;
+            height: 360px;
+        }
     }
 `

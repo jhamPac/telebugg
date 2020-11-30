@@ -16,6 +16,7 @@ export default function QView(props) {
     }, [props.location.state])
 
     const render = question => {
+        // TODO: eventually will get updated when we fetch questions with IDs
         if (question === undefined) {
             return null
         }

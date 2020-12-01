@@ -41,7 +41,7 @@ export default function Question({ question }) {
 }
 
 const Box = styled.div`
-    border: solid grey 1px;
+    border: solid #f8f8f2 2px;
     margin-bottom: 32px;
     width: 100%;
     padding: 16px;

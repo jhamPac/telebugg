@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     siteMetadata: {
         title: `Telebugg`,
-        description: `A software engineering Q & A website for the 21st century.`,
+        description: `The software engineering Q & A website for the 21st century.`,
         author: `jhamPac`,
     },
     plugins: [
@@ -11,11 +11,19 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        `gatsby-transformer-json`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `data`,
+                path: `${__dirname}/src/data`,
             },
         },
         {

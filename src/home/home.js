@@ -1,9 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Question from './question'
-import { graphql, useStaticQuery } from 'gatsby'
-
-import { navigate } from 'gatsby'
+import { graphql, navigate, useStaticQuery } from 'gatsby'
 
 export default function Home() {
     const { questions } = useStaticQuery(graphql`

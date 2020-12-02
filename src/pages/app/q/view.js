@@ -1,52 +1,41 @@
 import * as React from 'react'
-import { navigate } from 'gatsby'
 import styled from 'styled-components'
-
+import { graphql, useStaticQuery } from 'gatsby'
 import ReplyRow from './replyrow'
 
-export default function QView(props) {
-    const [redirect, setRedirect] = React.useState(false)
-
-    React.useEffect(() => {
-        // we can pass the question or fetch it here with the id
-        if (props.location.state === null) {
-            setRedirect(true)
-            navigate('/')
+export default function QView({ questionID }) {
+    const { question } = useStaticQuery(graphql`
+        {
+            question: topQuestionsJson(id: { eq: "4892742" }) {
+                src
+                title
+            }
         }
-    }, [props.location.state])
-
-    const render = question => {
-        // TODO: eventually will get updated when we fetch questions with IDs
-        if (question === undefined) {
-            return null
-        }
-
-        return (
-            <div id="question-view" style={{ paddingTop: '16px' }}>
-                <h2>{question.title}</h2>
-                <Video>
-                    <iframe
-                        title="question-iframe"
-                        src={question.src}
-                        frameBorder="0"
-                        className="giphy-embed"
-                        allowFullScreen
-                    ></iframe>
-                </Video>
-                <Body>
-                    <h3>Notes</h3>
-                    <p>{question.notes}</p>
-                </Body>
-                <Replies>
-                    <h2>Replies</h2>
-                    <ReplyRow />
-                    <ReplyRow />
-                </Replies>
-            </div>
-        )
-    }
-
-    return redirect ? null : render(props.location?.state?.question)
+    `)
+    console.log(question)
+    return (
+        <div id="question-view" style={{ paddingTop: '16px' }}>
+            <h2>{question.title}</h2>
+            <Video>
+                <iframe
+                    title="question-iframe"
+                    src={question.src}
+                    frameBorder="0"
+                    className="giphy-embed"
+                    allowFullScreen
+                ></iframe>
+            </Video>
+            <Body>
+                <h3>Notes</h3>
+                <p>{question.notes}</p>
+            </Body>
+            <Replies>
+                <h2>Replies</h2>
+                <ReplyRow />
+                <ReplyRow />
+            </Replies>
+        </div>
+    )
 }
 
 const Video = styled.div`

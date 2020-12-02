@@ -12,7 +12,7 @@ export default function ReplyRow(props) {
             </p>
             <UserBlock>
                 <Avatar>
-                    <img src="https://i.pravatar.cc/64?img=3" />
+                    <img src="https://i.pravatar.cc/64?img=3" alt="avatar" />
                     <p>user: coder123</p>
                 </Avatar>
                 <ReplyButtonGroup>

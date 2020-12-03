@@ -2,6 +2,8 @@ import * as React from 'react'
 import Container from '@layout/container'
 import Navbar from '@layout/navbar'
 
+import { wrapRootElement } from './src/apollo/wrap-root-element'
+
 const wrapPageElement = ({ element, props }) => {
     return (
         <Container>
@@ -11,4 +13,4 @@ const wrapPageElement = ({ element, props }) => {
     )
 }
 
-export { wrapPageElement }
+export { wrapRootElement, wrapPageElement }

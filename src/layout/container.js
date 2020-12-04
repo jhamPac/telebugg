@@ -5,10 +5,11 @@ const GlobalStyle = createGlobalStyle`
     html {
         background: #44475a;
         
-        input {
+        input, button {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
+            border-radius: 0;
         }
     }
 `

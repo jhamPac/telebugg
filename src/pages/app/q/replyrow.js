@@ -31,14 +31,14 @@ export default function ReplyRow(props) {
                     </div>
                     <div style={{ height: '64px', width: '64px', background: 'blue' }}>
                         <button
-                            style={{ cursor: 'pointer', width: '64px', height: '64px' }}
+                            style={{ cursor: 'pointer', width: '100%', height: '100%' }}
                         >
                             view
                         </button>
                     </div>
                     <div style={{ height: '64px', width: '64px', background: 'pink' }}>
                         <button
-                            style={{ cursor: 'pointer', width: '64px', height: '64px' }}
+                            style={{ cursor: 'pointer', width: '100%', height: '100%' }}
                         >
                             video chat
                         </button>
@@ -64,6 +64,14 @@ const UserBlock = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 64px;
+
+    button {
+        font-size: 11px;
+
+        @media screen and (min-width: 769px) {
+            font-size: 14px;
+        }
+    }
 `
 
 const Avatar = styled.div`

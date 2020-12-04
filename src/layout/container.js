@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
         background: #44475a;
         
          button {
-             background: white;
+             background: #f8f8f2;
             -webkit-appearance: none;
             -webkit-border-radius: none;
         }

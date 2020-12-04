@@ -12,7 +12,6 @@ export default function QView({ questionID }) {
             }
         }
     `)
-    console.log(question)
     return (
         <div id="question-view" style={{ paddingTop: '16px' }}>
             <h2>{question.title}</h2>

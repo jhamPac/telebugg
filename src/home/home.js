@@ -2,22 +2,54 @@ import * as React from 'react'
 import styled from 'styled-components'
 import gql from 'graphql-tag'
 import { useQuery } from '@apollo/client'
+import { navigate } from 'gatsby'
 
 import Question from './question'
 
-export default function Home() {
+export default function Home(props) {
     const { loading, error, data } = useQuery(gql`
         {
-            message
+            questions: topQuestions {
+                id
+                user {
+                    name
+                }
+                title
+                notes
+                createDate
+                createTime
+                src
+            }
         }
     `)
 
     if (error) {
-        throw new Error('error from graphql')
+        throw new Error('error with graphql')
     }
 
-    console.log(data.message)
-    return <div>K</div>
+    return loading ? (
+        <div>Loading...</div>
+    ) : (
+        <div id="home-view">
+            <ButtonsContainer>
+                <div>
+                    <button onClick={e => navigate('/app/p/view')}>
+                        Post a question
+                    </button>
+                </div>
+                <div>
+                    <button>Newest</button>
+                    <button>Trending</button>
+                    <button>Month</button>
+                </div>
+            </ButtonsContainer>
+            <QuestionsContainer>
+                {data.questions.map(question => (
+                    <Question key={question.id} question={question} />
+                ))}
+            </QuestionsContainer>
+        </div>
+    )
 }
 
 const ButtonsContainer = styled.div`

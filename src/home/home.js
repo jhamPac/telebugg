@@ -52,7 +52,18 @@ export default function Home(props) {
     )
 }
 
-const ButtonsContainer = styled.div``
+const ButtonsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 32px;
+    margin-bottom: 64px;
+    width: 100%;
+
+    button {
+        cursor: pointer;
+    }
+`
 
 const QuestionsContainer = styled.div`
     display: flex;

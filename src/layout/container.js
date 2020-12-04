@@ -18,6 +18,19 @@ export default function Container(props) {
     )
 }
 
-const C = styled.div``
+const C = styled.div`
+    background: #44475a;
+    color: #f8f8f2;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+`
 
-const Center = styled.div``
+const Center = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+`

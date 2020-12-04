@@ -4,6 +4,10 @@ import styled, { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
     html {
         background: #44475a;
+
+        button {
+            border-radius: 0;
+        }
     }
 `
 

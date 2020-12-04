@@ -6,7 +6,9 @@ const GlobalStyle = createGlobalStyle`
         background: #44475a;
         
          button {
-            border-radius: 0;
+             background: white;
+            -webkit-appearance: none;
+            -webkit-border-radius: none;
         }
     }
 `

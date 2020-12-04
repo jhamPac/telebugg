@@ -6,8 +6,7 @@ const GlobalStyle = createGlobalStyle`
         background: #44475a;
         
         input, button {
-            -webkit-appearance: none;
-            border-radius: 0;
+            -webkit-border-radius: none;
         }
     }
 `

@@ -4,6 +4,11 @@ import styled, { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
     html {
         background: #44475a;
+        
+        input, button {
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
     }
 `
 

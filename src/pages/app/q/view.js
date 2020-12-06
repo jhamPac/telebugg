@@ -1,24 +1,36 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
+import gql from 'graphql-tag'
+import { useQuery } from '@apollo/client'
+
 import ReplyRow from './replyrow'
 
 export default function QView({ questionID }) {
-    const { question } = useStaticQuery(graphql`
-        {
-            question: topQuestionsJson(id: { eq: "4892742" }) {
-                src
-                title
+    const i = Number(questionID)
+    const { loading, data } = useQuery(
+        gql`
+            query QuestionByID($id: Int!) {
+                question: questionByID(id: $id) {
+                    title
+                    src
+                    notes
+                }
             }
-        }
-    `)
-    return (
+        `,
+        { variables: { id: i } }
+    )
+
+    console.log(data)
+
+    return loading ? (
+        <div>Loading...</div>
+    ) : (
         <div id="question-view" style={{ paddingTop: '16px' }}>
-            <h2>{question.title}</h2>
+            <h2>{data.question.title}</h2>
             <Video>
                 <iframe
                     title="question-iframe"
-                    src={question.src}
+                    src={data.question.src}
                     frameBorder="0"
                     className="giphy-embed"
                     allowFullScreen
@@ -26,7 +38,7 @@ export default function QView({ questionID }) {
             </Video>
             <Body>
                 <h3>Notes</h3>
-                <p>{question.notes}</p>
+                <p>{data.question.notes}</p>
             </Body>
             <Replies>
                 <h2>Replies</h2>

@@ -66,7 +66,7 @@ const UserBlock = styled.div`
     height: 64px;
 
     button {
-        font-size: 11px;
+        font-size: 12px;
 
         @media screen and (min-width: 769px) {
             font-size: 14px;

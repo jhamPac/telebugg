@@ -5,6 +5,8 @@ module.exports = {
         title: `Telebugg`,
         description: `The FRIENDLY software engineering Q & A website for the 21st century.`,
         author: `jhamPac`,
+        url: 'https://www.telebug.gg',
+        twitterUsername: '@telebugg',
     },
     plugins: [
         `gatsby-plugin-styled-components`,

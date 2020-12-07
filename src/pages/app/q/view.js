@@ -2,12 +2,13 @@ import * as React from 'react'
 import styled from 'styled-components'
 import gql from 'graphql-tag'
 import { useQuery } from '@apollo/client'
+import { navigate } from 'gatsby'
 
 import ReplyRow from './replyrow'
 
 export default function QView({ questionID }) {
     const i = Number(questionID)
-    const { loading, data } = useQuery(
+    const { data, error, loading } = useQuery(
         gql`
             query QuestionByID($id: Int!) {
                 question: questionByID(id: $id) {
@@ -20,7 +21,9 @@ export default function QView({ questionID }) {
         { variables: { id: i } }
     )
 
-    console.log(data)
+    if (error) {
+        navigate('/')
+    }
 
     return loading ? (
         <div>Loading...</div>

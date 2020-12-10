@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
     siteMetadata: {
-        title: `Telebugg`,
+        title: `telebugg`,
         description: `The FRIENDLY software engineering Q & A website for the 21st century.`,
         author: `jhamPac`,
         url: 'https://www.telebug.gg',

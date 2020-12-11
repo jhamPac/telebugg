@@ -10,7 +10,7 @@ export default function QView({ questionID }) {
     const i = Number(questionID)
     const { data, error, loading } = useQuery(
         gql`
-            query QuestionByID($id: Int!) {
+            query QuestionByID($id: ID!) {
                 question: questionByID(id: $id) {
                     title
                     src

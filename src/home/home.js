@@ -7,21 +7,24 @@ import { navigate } from 'gatsby'
 import Question from './question'
 
 export default function Home(props) {
-    const { loading, error, data } = useQuery(gql`
-        {
-            questions: topQuestions {
-                id
-                user {
-                    name
+    const { loading, error, data } = useQuery(
+        gql`
+            {
+                questions: topQuestions {
+                    id
+                    user {
+                        name
+                    }
+                    title
+                    notes
+                    createDate
+                    createTime
+                    src
                 }
-                title
-                notes
-                createDate
-                createTime
-                src
             }
-        }
-    `)
+        `,
+        { fetchPolicy: 'no-cache' }
+    )
 
     if (error) {
         throw new Error('error with graphql')

@@ -56,6 +56,7 @@ module.exports = {
                 alias: {
                     '@layout': path.resolve(__dirname, 'src/layout'),
                     '@media': path.resolve(__dirname, 'src/media'),
+                    '@auth': path.resolve(__dirname, 'src/auth'),
                 },
                 extensions: ['js'],
             },

@@ -7,7 +7,6 @@ import { navigate } from 'gatsby'
 import Question from './question'
 
 export default function Home(props) {
-    console.log(process.env.GATSBY_COTTER_API, 'HELLO')
     const { loading, error, data } = useQuery(
         gql`
             {

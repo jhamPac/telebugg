@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import gql from 'graphql-tag'
 import { useQuery } from '@apollo/client'
-import { navigate } from 'gatsby'
+import { Link } from 'gatsby'
 
 import ReplyRow from './replyrow'
 
@@ -22,7 +22,11 @@ export default function QView({ questionID }) {
     )
 
     if (error) {
-        navigate('/')
+        return (
+            <div>
+                There was an error fetching this post. Return <Link to="/">home</Link>
+            </div>
+        )
     }
 
     return loading ? (

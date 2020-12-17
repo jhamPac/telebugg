@@ -12,7 +12,7 @@ export default function Main() {
                     </h1>
                 </div>
                 <HeroCopy>
-                    <div>
+                    <div className="copy">
                         <p>
                             Ask a question using screen recordings, code and connect live
                             with video chat all on one platform.
@@ -37,9 +37,24 @@ const HeroCopy = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    .button-group {
-        display: flex;
+    @media screen and (min-width: 769px) {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .copy {
+        @media screen and (min-width: 769px) {
+            width: 60%;
+        }
+    }
+
+    .button-group {
+        button:first-child {
+            margin-right: 8px;
+
+            @media screen and (min-width: 769px) {
+                margin-bottom: 8px;
+            }
+        }
     }
 `

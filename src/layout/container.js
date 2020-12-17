@@ -17,15 +17,14 @@ export default function Container(props) {
     return (
         <React.Fragment>
             <GlobalStyle />
-            <C>
-                <Center>{props.children}</Center>
-            </C>
+            <AppContainer>
+                <CenterContent>{props.children}</CenterContent>
+            </AppContainer>
         </React.Fragment>
     )
 }
 
-const C = styled.div`
-    background: #44475a;
+const AppContainer = styled.div`
     color: #f8f8f2;
     display: flex;
     flex-direction: column;
@@ -34,9 +33,10 @@ const C = styled.div`
     align-items: center;
 `
 
-const Center = styled.div`
+const CenterContent = styled.div`
     display: flex;
     flex-direction: column;
     width: 90%;
     height: 100%;
+    max-width: 1200px;
 `

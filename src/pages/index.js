@@ -30,15 +30,9 @@ export default function Main() {
                 </HeroCopy>
             </HeroSection>
             <FeatureSection>
-                <div className="feature-box">
-                    <img src="https://picsum.photos/id/1/250" alt="feature-img1" />
-                </div>
-                <div className="feature-box">
-                    <img src="https://picsum.photos/id/180/250" alt="feature-img2" />
-                </div>
-                <div className="feature-box">
-                    <img src="https://picsum.photos/250" alt="feature-img3" />
-                </div>
+                <div className="feature-box"></div>
+                <div className="feature-box"></div>
+                <div className="feature-box"></div>
             </FeatureSection>
         </main>
     )
@@ -90,6 +84,8 @@ const FeatureSection = styled.div`
 
     .feature-box {
         background: #6272a4;
+        width: 250px;
+        height: 250px;
 
         margin-bottom: 32px;
 

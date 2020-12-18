@@ -39,10 +39,10 @@ const StyledLink = styled(Link)`
 export default function App(props) {
     return (
         <Router basepath="/app">
+            <TopQuestions path="/top-questions" />
             <QView path="/q/view/:questionID" />
             <PView path="/p/view" />
             <Login path="/login" />
-            <TopQuestions path="/top-questions" />
             <NoMatch default />
         </Router>
     )

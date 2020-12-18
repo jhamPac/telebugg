@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { navigate } from 'gatsby'
 
 export default function Main() {
     return (
@@ -20,14 +21,22 @@ export default function Main() {
                     </div>
                     <div className="button-group">
                         <button>Ask a question</button>
-                        <button>View top questions</button>
+                        <button onClick={() => navigate('/app/top-questions')}>
+                            View top questions
+                        </button>
                     </div>
                 </HeroCopy>
             </HeroSection>
             <FeatureSection>
-                <div className="feature-box"></div>
-                <div className="feature-box"></div>
-                <div className="feature-box"></div>
+                <div className="feature-box">
+                    <img src="https://picsum.photos/id/1/250" alt="feature-img" />
+                </div>
+                <div className="feature-box">
+                    <img src="https://picsum.photos/id/180/250" alt="feature-img" />
+                </div>
+                <div className="feature-box">
+                    <img src="https://picsum.photos/250" alt="feature-img" />
+                </div>
             </FeatureSection>
         </main>
     )
@@ -42,6 +51,7 @@ const HeroCopy = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: 64px;
 
     @media screen and (min-width: 769px) {
         flex-direction: row;
@@ -77,10 +87,13 @@ const FeatureSection = styled.div`
     }
 
     .feature-box {
-        background: blue;
-        width: 250px;
-        height: 250px;
+        background: #6272a4;
+
         margin-bottom: 32px;
+
+        @media screen and (min-width: 769px) {
+            margin-right: 32px;
+        }
     }
 `
 

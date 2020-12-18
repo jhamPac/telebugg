@@ -25,12 +25,12 @@ export default function Container(props) {
 }
 
 const AppContainer = styled.div`
-    color: #f8f8f2;
     display: flex;
     flex-direction: column;
-    padding: 15px;
     justify-content: center;
     align-items: center;
+    color: #f8f8f2;
+    padding: 15px;
 `
 
 const CenterContent = styled.div`

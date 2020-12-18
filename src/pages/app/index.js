@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import QView from './q/view'
 import PView from './p/view'
 import Login from '@auth/login'
+import TopQuestions from './top-questions'
 
 const NoMatch = () => {
     return (
@@ -41,6 +42,7 @@ export default function App(props) {
             <QView path="/q/view/:questionID" />
             <PView path="/p/view" />
             <Login path="/login" />
+            <TopQuestions path="/top-questions" />
             <NoMatch default />
         </Router>
     )

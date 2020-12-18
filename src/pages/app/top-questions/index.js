@@ -6,7 +6,7 @@ import { navigate } from 'gatsby'
 
 import Question from './question'
 
-export default function Home(props) {
+export default function TopQuestions(props) {
     const { loading, error, data } = useQuery(
         gql`
             {
@@ -36,9 +36,7 @@ export default function Home(props) {
         <div id="home-view">
             <ButtonsContainer>
                 <div>
-                    <button onClick={e => navigate('/app/p/view')}>
-                        Post a question
-                    </button>
+                    <button onClick={e => navigate('/app/p/view')}>Ask a question</button>
                 </div>
                 <div>
                     <button>Newest</button>

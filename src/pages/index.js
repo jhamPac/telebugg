@@ -20,7 +20,9 @@ export default function Main() {
                         </p>
                     </div>
                     <div className="button-group">
-                        <button>Ask a question</button>
+                        <button onClick={() => navigate('/app/p/view')}>
+                            Ask a question
+                        </button>
                         <button onClick={() => navigate('/app/top-questions')}>
                             View top questions
                         </button>
@@ -29,13 +31,13 @@ export default function Main() {
             </HeroSection>
             <FeatureSection>
                 <div className="feature-box">
-                    <img src="https://picsum.photos/id/1/250" alt="feature-img" />
+                    <img src="https://picsum.photos/id/1/250" alt="feature-img1" />
                 </div>
                 <div className="feature-box">
-                    <img src="https://picsum.photos/id/180/250" alt="feature-img" />
+                    <img src="https://picsum.photos/id/180/250" alt="feature-img2" />
                 </div>
                 <div className="feature-box">
-                    <img src="https://picsum.photos/250" alt="feature-img" />
+                    <img src="https://picsum.photos/250" alt="feature-img3" />
                 </div>
             </FeatureSection>
         </main>

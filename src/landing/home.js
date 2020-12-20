@@ -36,7 +36,6 @@ export default function Home() {
                     viewBox="0 0 1200 120"
                     preserveAspectRatio="none"
                     fill="currentColor"
-                    transform="rotate(180)"
                 >
                     <path
                         class="shape-fill"
@@ -139,6 +138,12 @@ const WaveDivider = styled.div`
     overflow: hidden;
     line-height: 0;
     color: #50fa7b;
+
+    svg[data-name='top-wave'] {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+    }
 `
 
 const FeatureSection = styled.div`

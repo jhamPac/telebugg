@@ -7,7 +7,7 @@ export default function Home() {
         <main id="landing-page">
             <HeroSection>
                 <div>
-                    <h1 className="headline">Ask, connect and learn.</h1>
+                    <h1 className="headline">Ask, connect and learn</h1>
                 </div>
                 <HeroCopy>
                     <div className="copy">
@@ -47,6 +47,10 @@ const HeroSection = styled.div`
 
 const HeroCopy = styled.div`
     margin-top: 32px;
+
+    p {
+        margin-bottom: 32px;
+    }
 
     @media screen and (min-width: 769px) {
         display: flex;

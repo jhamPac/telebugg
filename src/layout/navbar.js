@@ -28,7 +28,7 @@ const N = styled.nav`
     height: 64px;
 
     a {
-        color: #f8f8f2;
+        color: #282a36;
         text-decoration: none;
     }
 `

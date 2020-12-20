@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     html {
-        background: #282a36;
+        background: #f8f8f2;
         
          button {
              background: #f8f8f2;
@@ -29,7 +29,7 @@ const AppContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #f8f8f2;
+    color: #282a36;
     padding: 15px;
 `
 

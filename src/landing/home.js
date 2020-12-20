@@ -13,7 +13,7 @@ export default function Home() {
                     <div className="copy">
                         <p style={{ fontSize: '18px' }}>
                             Welcome to telebugg, the{' '}
-                            <span style={{ color: '#f1fa8c' }}>FRIENDLY</span> software
+                            <span style={{ color: '#bd93f9' }}>FRIENDLY</span> software
                             engineering Q & A website for the 21st century. Whether you
                             are just beginning or a seasoned vet, ask away and never fret.
                         </p>
@@ -110,11 +110,11 @@ const WaveDivider = styled.div`
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    color: #44475a;
+    color: #50fa7b;
 `
 
 const FeatureSection = styled.div`
-    background: #44475a;
+    background: #50fa7b;
     height: 250px;
 `
 

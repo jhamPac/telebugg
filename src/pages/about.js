@@ -6,7 +6,7 @@ export default function About() {
         <div id="about">
             <div>
                 <h2>
-                    The <span style={{ color: '#f1fa8c' }}>FRIENDLY</span> software
+                    The <span style={{ color: '#bd93f9' }}>FRIENDLY</span> software
                     engineering Q & A website for the 21st century
                 </h2>
             </div>

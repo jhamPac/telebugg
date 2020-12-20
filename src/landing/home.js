@@ -33,7 +33,7 @@ export default function Home() {
             </HeroSection>
             <WaveDivider>
                 <svg
-                    data-name="Layer 1"
+                    data-name="top-wave"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1200 120"
                     preserveAspectRatio="none"

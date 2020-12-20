@@ -79,7 +79,7 @@ const Video = styled.div`
 `
 
 const Body = styled.div`
-    color: #f1fa8c;
+    color: #ff5555;
     margin-bottom: 64px;
 
     p {

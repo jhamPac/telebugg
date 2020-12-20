@@ -7,16 +7,14 @@ export default function Home() {
         <main id="landing-page">
             <HeroSection>
                 <div>
-                    <h1>
-                        The <span style={{ color: '#f1fa8c' }}>FRIENDLY</span> software
-                        engineering Q & A website for the 21st century
-                    </h1>
+                    <h1 className="headline">Ask, connect and learn.</h1>
                 </div>
                 <HeroCopy>
                     <div className="copy">
                         <p style={{ fontSize: '18px' }}>
-                            Ask a question using screen recordings, code and connect live
-                            with video chat all on one platform.
+                            Welcome to telebugg, the friendly software engineering Q & A
+                            website for the 21st century. Whether you are just beginning
+                            or a seasoned vet, ask away and never fret.
                         </p>
                     </div>
                     <div className="button-group">
@@ -41,17 +39,20 @@ export default function Home() {
 const HeroSection = styled.div`
     margin-top: 32px;
     margin-bottom: 64px;
+
+    @media screen and (min-width: 769px) {
+        text-align: center;
+    }
 `
 
 const HeroCopy = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 64px;
+    margin-top: 32px;
 
     @media screen and (min-width: 769px) {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .copy {

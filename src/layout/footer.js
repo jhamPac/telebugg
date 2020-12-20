@@ -8,7 +8,7 @@ export default function Footer(props) {
                 &#169;<span>{` ${new Date().getFullYear()} telebugg`}</span>
             </h4>
             <div className="social-icons">
-                <a href="https://twitter.com/telebugg">
+                <a href="https://twitter.com/telebugg" target="_blank" rel="noreferrer">
                     <svg width="24" height="24" viewBox="0 0 24 24">
                         <path
                             fill="currentColor"
@@ -16,14 +16,13 @@ export default function Footer(props) {
                         ></path>
                     </svg>
                 </a>
-                <a href="">
-                    <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                            fill="currentColor"
-                            d="M20.875 2H3.09375C2.46875 2 2 2.5 2 3.09375V20.875C2 21.5 2.5 21.9687 3.09375 21.9687H12.6875V14.2188H10.0625V11.1875H12.6562V8.96874C12.6562 6.375 14.2187 4.96875 16.5312 4.96875C17.625 4.96875 18.5937 5.0625 18.875 5.09375V7.78125H17.2812C16.0312 7.78125 15.7812 8.375 15.7812 9.25V11.1875H18.7812L18.4062 14.25H15.8125V22H20.9062C21.5312 22 22 21.5 22 20.9062V3.125C22 2.46875 21.5 2 20.875 2Z"
-                        ></path>
-                    </svg>
-                </a>
+
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        fill="currentColor"
+                        d="M20.875 2H3.09375C2.46875 2 2 2.5 2 3.09375V20.875C2 21.5 2.5 21.9687 3.09375 21.9687H12.6875V14.2188H10.0625V11.1875H12.6562V8.96874C12.6562 6.375 14.2187 4.96875 16.5312 4.96875C17.625 4.96875 18.5937 5.0625 18.875 5.09375V7.78125H17.2812C16.0312 7.78125 15.7812 8.375 15.7812 9.25V11.1875H18.7812L18.4062 14.25H15.8125V22H20.9062C21.5312 22 22 21.5 22 20.9062V3.125C22 2.46875 21.5 2 20.875 2Z"
+                    ></path>
+                </svg>
             </div>
         </F>
     )

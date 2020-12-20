@@ -19,22 +19,15 @@ module.exports = {
         `gatsby-transformer-json`,
         `gatsby-plugin-react-helmet`,
         {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`,
-            },
-        },
-        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `telebugg`,
                 short_name: `telebugg`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#f8f8f2`,
+                theme_color: `#50fa7b`,
                 display: `minimal-ui`,
-                icon: `src/images/telebugg.png`, // This path is relative to the root of the site.
+                icon: `assets/telebugg.png`, // This path is relative to the root of the site.
             },
         },
         {

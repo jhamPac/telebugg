@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
+import AskSVG from '../../assets/ask.svg'
 
 export default function Home() {
     return (
@@ -44,7 +45,9 @@ export default function Home() {
                 </svg>
             </WaveDivider>
             <FeatureSection>
-                <div></div>
+                <div className="feature-svg-container">
+                    <AskSVG />
+                </div>
                 <div className="description">
                     <h2>Screen share and record</h2>
                     <p>
@@ -121,11 +124,38 @@ const WaveDivider = styled.div`
 `
 
 const FeatureSection = styled.div`
-    background: #50fa7b;
-    height: 250px;
-
     display: flex;
     flex-direction: column;
+    padding: 16px;
+
+    background: #50fa7b;
+
+    .feature-svg-container {
+        margin-bottom: 16px;
+
+        @media screen and (min-width: 769px) {
+            width: 50%;
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .description {
+        @media screen and (min-width: 769px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: 40%;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 `
 
 const QuoteSection = styled.div``

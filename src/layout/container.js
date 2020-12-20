@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     html {
-        background: #44475a;
+        background: #282a36;
         
          button {
              background: #f8f8f2;

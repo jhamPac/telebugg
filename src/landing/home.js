@@ -12,9 +12,10 @@ export default function Home() {
                 <HeroCopy>
                     <div className="copy">
                         <p style={{ fontSize: '18px' }}>
-                            Welcome to telebugg, the friendly software engineering Q & A
-                            website for the 21st century. Whether you are just beginning
-                            or a seasoned vet, ask away and never fret.
+                            Welcome to telebugg, the{' '}
+                            <span style={{ color: '#f1fa8c' }}>FRIENDLY</span> software
+                            engineering Q & A website for the 21st century. Whether you
+                            are just beginning or a seasoned vet, ask away and never fret.
                         </p>
                     </div>
                     <div className="button-group">
@@ -27,11 +28,38 @@ export default function Home() {
                     </div>
                 </HeroCopy>
             </HeroSection>
+            <WaveDivider>
+                <svg
+                    data-name="top-wave"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                    fill="currentColor"
+                    transform="rotate(180)"
+                >
+                    <path
+                        class="shape-fill"
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    ></path>
+                </svg>
+            </WaveDivider>
             <FeatureSection>
-                <div className="feature-box"></div>
-                <div className="feature-box"></div>
-                <div className="feature-box"></div>
+                <h2>yeah</h2>
             </FeatureSection>
+            <WaveDivider>
+                <svg
+                    data-name="bottom-wave"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                    fill="currentColor"
+                >
+                    <path
+                        class="shape-fill"
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    ></path>
+                </svg>
+            </WaveDivider>
         </main>
     )
 }
@@ -76,28 +104,18 @@ const HeroCopy = styled.div`
     }
 `
 
+const WaveDivider = styled.div`
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    color: #44475a;
+`
+
 const FeatureSection = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (min-width: 769px) {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .feature-box {
-        background: #6272a4;
-        width: 250px;
-        height: 250px;
-
-        margin-bottom: 32px;
-
-        @media screen and (min-width: 769px) {
-            margin-right: 32px;
-        }
-    }
+    background: #44475a;
+    height: 250px;
 `
 
 const QuoteSection = styled.div``

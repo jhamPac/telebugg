@@ -52,7 +52,7 @@ export default function Home() {
                     <h2>Screen share and record</h2>
                     <p>
                         Software is hard, why ask a question using only text. Articulate
-                        your question using screen shares and recordings.
+                        your question using screen shares, recordings and code.
                     </p>
                 </div>
             </FeatureSection>
@@ -70,6 +70,24 @@ export default function Home() {
                     ></path>
                 </svg>
             </WaveDivider>
+            <QuoteSection>
+                <h3>
+                    I just wanted to create a place where anyone can ask a software
+                    engineering question without having to worry about being scrunized or
+                    feeling like a "noob"
+                </h3>
+                <h4>
+                    -{' '}
+                    <a
+                        href="https://twitter.com/keviaDotMe"
+                        target="_blank"
+                        style={{ color: '#bd93f9' }}
+                    >
+                        Kevia Cloud
+                    </a>{' '}
+                    -
+                </h4>
+            </QuoteSection>
         </main>
     )
 }
@@ -158,4 +176,12 @@ const FeatureSection = styled.div`
     }
 `
 
-const QuoteSection = styled.div``
+const QuoteSection = styled.div`
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+
+    a {
+        font-size: 20px;
+    }
+`

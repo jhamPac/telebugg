@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
 import AskSVG from '../../assets/ask.svg'
+import ConnectSVG from '../../assets/vid-connect.svg'
 
 export default function Home() {
     return (
@@ -31,15 +32,15 @@ export default function Home() {
             </HeroSection>
             <WaveDivider>
                 <svg
-                    data-name="top-wave"
+                    data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1200 120"
                     preserveAspectRatio="none"
                     fill="currentColor"
                 >
                     <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
                         class="shape-fill"
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
                     ></path>
                 </svg>
             </WaveDivider>
@@ -87,6 +88,46 @@ export default function Home() {
                     -
                 </h4>
             </QuoteSection>
+            <WaveDivider>
+                <svg
+                    data-name="top-wave"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                    fill="currentColor"
+                >
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"
+                    ></path>
+                </svg>
+            </WaveDivider>
+            <FeatureSection>
+                <div className="description">
+                    <h2>Answer back and connect</h2>
+                    <p>
+                        Why simply reply with a comment? If the original poster is online
+                        connect via video chat and explain away.
+                    </p>
+                </div>
+                <div className="feature-svg-container">
+                    <ConnectSVG />
+                </div>
+            </FeatureSection>
+            <WaveDivider>
+                <svg
+                    data-name="bottom-wave"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                    fill="currentColor"
+                >
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"
+                    ></path>
+                </svg>
+            </WaveDivider>
         </main>
     )
 }
@@ -123,9 +164,10 @@ const HeroCopy = styled.div`
     .button-group {
         button:first-child {
             margin-right: 8px;
+            margin-bottom: 16px;
 
             @media screen and (min-width: 769px) {
-                margin-bottom: 8px;
+                margin-bottom: 0px;
             }
         }
     }
@@ -138,12 +180,6 @@ const WaveDivider = styled.div`
     overflow: hidden;
     line-height: 0;
     color: #50fa7b;
-
-    svg[data-name='top-wave'] {
-        transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-    }
 `
 
 const FeatureSection = styled.div`
@@ -162,6 +198,7 @@ const FeatureSection = styled.div`
 
         svg {
             width: 100%;
+            height: 256px;
         }
     }
 

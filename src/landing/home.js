@@ -73,8 +73,8 @@ export default function Home() {
             <QuoteSection>
                 <h3>
                     I just wanted to create a place where anyone can ask a software
-                    engineering question without having to worry about being scrunized or
-                    feeling like a "noob"
+                    engineering question without having to worry about being scrutinized
+                    or feeling like a "noob"
                 </h3>
                 <h4>
                     -{' '}

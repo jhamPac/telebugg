@@ -44,7 +44,14 @@ export default function Home() {
                 </svg>
             </WaveDivider>
             <FeatureSection>
-                <h2>yeah</h2>
+                <div></div>
+                <div className="description">
+                    <h2>Screen share and record</h2>
+                    <p>
+                        Software is hard, why ask a question using only text. Articulate
+                        your question using screen shares and recordings.
+                    </p>
+                </div>
             </FeatureSection>
             <WaveDivider>
                 <svg
@@ -116,6 +123,9 @@ const WaveDivider = styled.div`
 const FeatureSection = styled.div`
     background: #50fa7b;
     height: 250px;
+
+    display: flex;
+    flex-direction: column;
 `
 
 const QuoteSection = styled.div``

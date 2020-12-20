@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
-import AskSVG from '../../assets/ask.svg'
-import ConnectSVG from '../../assets/vid-connect.svg'
-import FollowersSVG from '../../assets/followers.svg'
+import AskSVG from '@assets/ask.svg'
+import ConnectSVG from '@assets/vid-connect.svg'
+import FollowersSVG from '@assets/followers.svg'
 
 export default function Home() {
     return (

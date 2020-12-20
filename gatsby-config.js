@@ -50,6 +50,7 @@ module.exports = {
                     '@layout': path.resolve(__dirname, 'src/layout'),
                     '@media': path.resolve(__dirname, 'src/media'),
                     '@auth': path.resolve(__dirname, 'src/auth'),
+                    '@assets': path.resolve(__dirname, 'assets'),
                 },
                 extensions: ['js'],
             },

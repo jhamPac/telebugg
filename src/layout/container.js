@@ -1,6 +1,17 @@
 import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
+/**
+ * Hex color used
+ *
+ * background-white: #f8f8f2
+ * most fonts: 	#282a36
+ * accent purple: #bd93f9
+ * secondary red: #ff5555
+ *
+ *
+ */
+
 const GlobalStyle = createGlobalStyle`
     html {
         background: #f8f8f2;

@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import useMediaRecorder from '@srcRoot/media/useMediaRecorder'
 
-export default function PView(props) {
+export default function Post(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
     return (
         <div id="post-view">

@@ -3,10 +3,10 @@ import { Router } from '@reach/router'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import QView from './q/view'
-import PView from './p/view'
+import QuestionView from '@components/question/view'
+import PostView from '@components/post/view'
 import Login from '@components/login/login'
-import TopQuestions from './top-questions/index'
+import TopQuestions from '@components/top-questions/topQuestions'
 
 const NoMatch = () => {
     return (
@@ -40,8 +40,8 @@ export default function App(props) {
     return (
         <Router basepath="/app">
             <TopQuestions path="/top-questions" />
-            <QView path="/q/view/:questionID" />
-            <PView path="/p/view" />
+            <QuestionView path="/q/view/:questionID" />
+            <PostView path="/p/view" />
             <Login path="/login" />
             <NoMatch default />
         </Router>

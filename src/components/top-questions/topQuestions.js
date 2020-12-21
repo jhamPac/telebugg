@@ -4,7 +4,7 @@ import gql from 'graphql-tag'
 import { useQuery } from '@apollo/client'
 import { navigate } from 'gatsby'
 
-import Question from '../../../tp/question'
+import Question from './question'
 
 export default function TopQuestions(props) {
     const { loading, error, data } = useQuery(

@@ -33,7 +33,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-typography`,
             options: {
-                pathToConfigModule: `src/util/typography`,
+                pathToConfigModule: `src/utils/typography`,
             },
         },
         {
@@ -41,6 +41,7 @@ module.exports = {
             options: {
                 alias: {
                     '@components': path.resolve(__dirname, 'src/components'),
+                    '@hooks': path.resolve(__dirname, 'src/hooks'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
                     '@assets': path.resolve(__dirname, 'assets'),
                 },

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import useMediaRecorder from '@srcRoot/media/useMediaRecorder'
+import useMediaRecorder from '@hooks/media/useMediaRecorder'
 
 export default function Post(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()

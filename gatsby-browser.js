@@ -1,8 +1,8 @@
 import * as React from 'react'
-import Container from '@layout/container'
-import Navbar from '@layout/navbar'
-import Footer from '@layout/footer'
-import SEO from './src/seo/seo'
+import Container from '@components/layout/container'
+import Navbar from '@components/layout/navbar'
+import SEO from '@components/seo/seo'
+import Footer from '@components/layout/footer'
 
 import { wrapRootElement } from './src/apollo/wrap-root-element'
 

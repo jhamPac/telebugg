@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import QView from './q/view'
 import PView from './p/view'
-import Login from '@auth/login'
+import Login from '@components/login/login'
 import TopQuestions from './top-questions/index'
 
 const NoMatch = () => {

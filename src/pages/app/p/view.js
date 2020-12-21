@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import useMediaRecorder from '@media/useMediaRecorder'
+import useMediaRecorder from '@srcRoot/media/useMediaRecorder'
 
 export default function PView(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()

@@ -40,9 +40,8 @@ module.exports = {
             resolve: `gatsby-plugin-alias-imports`,
             options: {
                 alias: {
-                    '@layout': path.resolve(__dirname, 'src/layout'),
-                    '@media': path.resolve(__dirname, 'src/media'),
-                    '@auth': path.resolve(__dirname, 'src/auth'),
+                    '@components': path.resolve(__dirname, 'src/components'),
+                    '@srcRoot': path.resolve(__dirname, 'src'),
                     '@assets': path.resolve(__dirname, 'assets'),
                 },
                 extensions: ['js'],

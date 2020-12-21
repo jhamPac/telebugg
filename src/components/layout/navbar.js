@@ -14,7 +14,7 @@ export default function Navbar() {
                 </h3>
             </Link>
             <Link to="/about">
-                <h3>About</h3>
+                <h3>about</h3>
             </Link>
         </N>
     )

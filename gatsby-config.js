@@ -40,10 +40,10 @@ module.exports = {
             resolve: `gatsby-plugin-alias-imports`,
             options: {
                 alias: {
+                    '@assets': path.resolve(__dirname, 'assets'),
                     '@components': path.resolve(__dirname, 'src/components'),
                     '@hooks': path.resolve(__dirname, 'src/hooks'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
-                    '@assets': path.resolve(__dirname, 'assets'),
                 },
                 extensions: ['js'],
             },

@@ -4,9 +4,9 @@ import { Link } from 'gatsby'
 
 import TelebuggSVG from '@assets/telebugg.svg'
 
-export default function Navbar() {
+function Navbar(props) {
     return (
-        <N>
+        <nav className={props.className}>
             <div>
                 <TelebuggSVG />
                 <Link to="/">
@@ -16,11 +16,11 @@ export default function Navbar() {
             <Link to="/about">
                 <h3>about</h3>
             </Link>
-        </N>
+        </nav>
     )
 }
 
-const N = styled.nav`
+const StyledNavBar = styled(Navbar)`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,3 +45,5 @@ const N = styled.nav`
         text-decoration: none;
     }
 `
+
+export default StyledNavBar

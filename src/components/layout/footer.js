@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-export default function Footer(props) {
+function Footer(props) {
     return (
-        <F>
+        <footer className={props.className}>
             <h4>
                 &#169;<span>{` ${new Date().getFullYear()} telebugg`}</span>
             </h4>
@@ -24,11 +24,11 @@ export default function Footer(props) {
                     ></path>
                 </svg>
             </div>
-        </F>
+        </footer>
     )
 }
 
-const F = styled.footer`
+const StyledFooter = styled(Footer)`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,3 +47,5 @@ const F = styled.footer`
         }
     }
 `
+
+export default StyledFooter

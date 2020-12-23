@@ -14,7 +14,7 @@ export default function About() {
                 <Video>
                     <iframe
                         title="about-video"
-                        src="https://player.vimeo.com/video/482348946"
+                        src="https://player.vimeo.com/video/494269141"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen

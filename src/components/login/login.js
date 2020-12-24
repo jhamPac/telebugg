@@ -2,6 +2,8 @@ import * as React from 'react'
 import Cotter from 'cotter'
 import styled from 'styled-components'
 
+import useAuth from '@hooks/auth/useAuth'
+
 export default function Login(props) {
     const [payload, setPayload] = React.useState()
     const loginFormSetup = async () => {

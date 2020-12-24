@@ -190,6 +190,10 @@ const HeroCopy = styled.div`
                 margin-bottom: 0px;
             }
         }
+
+        button {
+            cursor: pointer;
+        }
     }
 `
 

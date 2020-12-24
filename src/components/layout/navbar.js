@@ -7,7 +7,7 @@ import TelebuggSVG from '@assets/telebugg.svg'
 import useAuth from '@hooks/auth/useAuth'
 
 function Navbar(props) {
-    const [isLoggedIn] = useAuth()
+    const { isLoggedIn } = useAuth()
     return (
         <nav className={props.className}>
             <div className="left-nav-items">

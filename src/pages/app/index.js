@@ -48,9 +48,9 @@ const StyledLink = styled(Link)`
 `
 
 const ProtectRoute = ({ component: Component, location, ...rest }) => {
-    const [isLoggedIn] = useAuth()
+    const { isLoggedIn } = useAuth()
     if (isLoggedIn === false && location.pathname !== '/app/login') {
-        navigate('/app/login')
+        navigate('/app/login', { state: { prevURL: location.pathname } })
         return null
     }
 

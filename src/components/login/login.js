@@ -8,6 +8,7 @@ import { useAuth } from '@hooks/auth'
 export default function Login(props) {
     const { saveToken } = useAuth()
     const [error, setError] = React.useState()
+
     const loginFormSetup = async () => {
         try {
             const cotter = new Cotter({

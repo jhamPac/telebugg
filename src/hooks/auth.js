@@ -6,13 +6,12 @@ function AuthProvider(props) {
     const [isLoggedIn, setIsLoggedIn] = React.useState(false)
 
     const verifyToken = async token => {
+        const URL = 'https://worker.cotter.app/verify'
         const body = {
             oauth_token: {
                 access_token: token,
             },
         }
-
-        const URL = 'https://worker.cotter.app/verify'
 
         try {
             const result = await fetch(URL, {
@@ -43,7 +42,6 @@ function AuthProvider(props) {
         }
 
         const token = window.localStorage.getItem('a_tk')
-
         if (token === null) {
             setIsLoggedIn(false)
             return

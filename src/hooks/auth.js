@@ -3,20 +3,64 @@ import * as React from 'react'
 const AuthContext = React.createContext()
 
 function AuthProvider(props) {
-    let inMemoryToken = null
+    const [isLoggedIn, setIsLoggedIn] = React.useState(false)
 
-    const [isLoggedIn, setIsLoggedIn] = React.useState(inMemoryToken !== null)
+    const verifyToken = async token => {
+        const body = {
+            oauth_token: {
+                access_token: token,
+            },
+        }
 
-    const saveToken = token => {
-        inMemoryToken = token
-        setIsLoggedIn(inMemoryToken !== null)
+        const URL = 'https://worker.cotter.app/verify'
+
+        try {
+            const result = await fetch(URL, {
+                method: 'POST',
+                cache: 'no-cache',
+                headers: {
+                    'content-type': 'application/json',
+                    API_KEY_ID: process.env.GATSBY_COTTER_API,
+                },
+                mode: 'cors',
+                body: JSON.stringify(body),
+            }).then(async resp => await resp.json())
+
+            if (result.success === true) {
+                setIsLoggedIn(true)
+            } else {
+                setIsLoggedIn(false)
+            }
+        } catch (err) {
+            setIsLoggedIn(false)
+        }
     }
 
-    const getToken = () => inMemoryToken
+    React.useEffect(() => {
+        if (window === undefined) {
+            setIsLoggedIn(false)
+            return
+        }
+
+        const token = window.localStorage.getItem('a_tk')
+
+        if (token === null) {
+            setIsLoggedIn(false)
+            return
+        }
+
+        verifyToken(token)
+    }, [])
+
+    const saveToken = token => {
+        if (window !== undefined) {
+            window.localStorage.setItem('a_tk', token.oauth_token.access_token)
+            setIsLoggedIn(true)
+        }
+    }
 
     const value = {
         isLoggedIn,
-        getToken,
         saveToken,
     }
 

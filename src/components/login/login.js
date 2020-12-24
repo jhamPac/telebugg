@@ -3,7 +3,7 @@ import Cotter from 'cotter'
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
 
-import useAuth from '@hooks/auth/useAuth'
+import { useAuth } from '@hooks/auth'
 
 export default function Login(props) {
     const { saveToken } = useAuth()

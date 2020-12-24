@@ -8,7 +8,7 @@ import PostView from '@components/post/view'
 import Login from '@components/login/login'
 import TopQuestions from '@components/top-questions/topQuestions'
 
-import useAuth from '@hooks/auth/useAuth'
+import { useAuth } from '@hooks/auth'
 
 const NoMatch = () => {
     return (

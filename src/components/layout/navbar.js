@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import TelebuggSVG from '@assets/telebugg.svg'
 
-import useAuth from '@hooks/auth/useAuth'
+import { useAuth } from '@hooks/auth'
 
 function Navbar(props) {
     const { isLoggedIn } = useAuth()

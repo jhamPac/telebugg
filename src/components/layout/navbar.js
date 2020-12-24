@@ -10,13 +10,13 @@ function Navbar(props) {
     const [isLoggedIn] = useAuth()
     return (
         <nav className={props.className}>
-            <div>
+            <div className="left-nav-items">
                 <TelebuggSVG />
                 <Link to="/">
                     <h3>telebugg </h3>
                 </Link>
             </div>
-            <div>
+            <div className="right-nav-items">
                 <Link to="/about">
                     <h3>about</h3>
                 </Link>
@@ -41,9 +41,12 @@ const StyledNavBar = styled(Navbar)`
     align-items: center;
     height: 64px;
 
-    div {
+    h3 {
+        display: inline-block;
+    }
+
+    .left-nav-items {
         h3 {
-            display: inline-block;
             margin-left: 8px;
         }
 
@@ -51,6 +54,12 @@ const StyledNavBar = styled(Navbar)`
             width: 32px;
             height: 32px;
             vertical-align: middle;
+        }
+    }
+
+    .right-nav-items {
+        a:first-child {
+            margin-right: 16px;
         }
     }
 

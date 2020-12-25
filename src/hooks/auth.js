@@ -28,6 +28,9 @@ function AuthProvider(props) {
             if (result.success === true) {
                 setIsLoggedIn(true)
             } else {
+                if (window !== undefined) {
+                    window.localStorage.removeItem('a_tk')
+                }
                 setIsLoggedIn(false)
             }
         } catch (err) {

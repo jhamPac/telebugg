@@ -7,6 +7,7 @@ import QuestionView from '@components/question/view'
 import PostView from '@components/post/view'
 import Login from '@components/login/login'
 import TopQuestions from '@components/top-questions/topQuestions'
+import Account from '@components/account/dashboard'
 
 import { useAuth } from '@hooks/auth'
 
@@ -57,13 +58,24 @@ const ProtectRoute = ({ component: Component, location, ...rest }) => {
     return <Component {...rest} />
 }
 
+const LoginCheck = ({ component: Component, location, ...rest }) => {
+    const { isLoggedIn } = useAuth()
+    if (isLoggedIn === true && location.pathname === '/app/login') {
+        navigate('/app/account', { state: { prevURL: location.pathname } })
+        return null
+    }
+
+    return <Component {...rest} />
+}
+
 export default function App(props) {
     return (
         <Router basepath="/app">
             <TopQuestions path="/top-questions" />
             <QuestionView path="/q/view/:questionID" />
             <ProtectRoute path="/p/view" component={PostView} />
-            <Login path="/login" />
+            <ProtectRoute path="/account" component={Account} />
+            <LoginCheck path="/login" component={Login} />
             <NoMatch default />
         </Router>
     )

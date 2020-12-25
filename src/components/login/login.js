@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { navigate } from 'gatsby'
 
 import { useAuth } from '@hooks/auth'
-const cotterToken = require('cotter-token-js')
 
 export default function Login(props) {
     const { saveToken } = useAuth()
@@ -22,11 +21,11 @@ export default function Login(props) {
                 },
             })
             const response = await cotter.signInWithLink().showEmailForm()
-            saveToken(response)
             setTimeout(() => {
-                const redirectURL = props.location.state.prevURL ?? '/'
+                const redirectURL = props.location?.state?.prevURL ?? '/'
                 navigate(redirectURL)
-            }, 1500)
+                saveToken(response)
+            }, 2000)
         } catch (err) {
             setError(true)
         }
@@ -35,10 +34,6 @@ export default function Login(props) {
     React.useEffect(() => {
         loginFormSetup()
     }, [])
-
-    // const t = window.localStorage.getItem('a_tk')
-    // console.log(t)
-    // console.log(new cotterToken.CotterAccessToken(t))
 
     return (
         <FormWrapper>
@@ -62,7 +57,7 @@ const FormWrapper = styled.div`
 
 const Form = styled.div`
     width: 300px;
-    height: 300px;
+    height: 500px;
 
     h3 {
         margin-bottom: 0;

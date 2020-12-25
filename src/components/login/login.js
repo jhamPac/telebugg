@@ -23,6 +23,7 @@ export default function Login(props) {
             const response = await cotter.signInWithLink().showEmailForm()
             setTimeout(() => {
                 const redirectURL = props.location?.state?.prevURL ?? '/'
+                // saveToken should have a cb
                 navigate(redirectURL)
                 saveToken(response)
             }, 2000)

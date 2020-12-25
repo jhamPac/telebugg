@@ -51,6 +51,10 @@ function AuthProvider(props) {
     }, [])
 
     const saveToken = token => {
+        // go register the user in GCP
+        // whether they exist or not
+        // if not create the user and return success
+        // if user exist just return success
         if (window !== undefined) {
             window.localStorage.setItem('a_tk', token.oauth_token.access_token)
             setIsLoggedIn(true)

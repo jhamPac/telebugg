@@ -1,25 +1,15 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import gql from 'graphql-tag'
 import { useQuery } from '@apollo/client'
 import { Link } from 'gatsby'
+import { GET_QUESTION } from './queries'
 
 import ReplyRow from './replyrow'
 
-export default function QView({ questionID }) {
-    const i = Number(questionID)
-    const { data, error, loading } = useQuery(
-        gql`
-            query QuestionByID($id: ID!) {
-                question: questionByID(id: $id) {
-                    title
-                    src
-                    notes
-                }
-            }
-        `,
-        { variables: { id: i } }
-    )
+export default function QView(props) {
+    const { data, error, loading } = useQuery(GET_QUESTION, {
+        variables: { id: Number(props.questionID) },
+    })
 
     if (error) {
         return (

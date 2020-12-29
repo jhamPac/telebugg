@@ -1,30 +1,15 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import gql from 'graphql-tag'
 import { useQuery } from '@apollo/client'
 import { navigate } from 'gatsby'
+import { GET_TOP_QUESTIONS } from './queries'
 
 import Question from './question'
 
 export default function TopQuestions(props) {
-    const { loading, error, data } = useQuery(
-        gql`
-            {
-                questions: topQuestions {
-                    id
-                    user {
-                        name
-                    }
-                    title
-                    notes
-                    createDate
-                    createTime
-                    src
-                }
-            }
-        `,
-        { fetchPolicy: 'no-cache' }
-    )
+    const { loading, error, data } = useQuery(GET_TOP_QUESTIONS, {
+        fetchPolicy: 'no-cache',
+    })
 
     if (error) {
         throw new Error('error with graphql')

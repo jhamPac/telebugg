@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { useQuery } from '@apollo/client'
-import { navigate } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { GET_TOP_QUESTIONS } from './queries'
 
 import Question from './question'

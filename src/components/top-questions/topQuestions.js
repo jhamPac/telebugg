@@ -12,7 +12,11 @@ export default function TopQuestions(props) {
     })
 
     if (error) {
-        throw new Error('error with graphql')
+        return (
+            <div>
+                Oops looks like there was an error. Return <Link to="/">home</Link>
+            </div>
+        )
     }
 
     return loading ? (

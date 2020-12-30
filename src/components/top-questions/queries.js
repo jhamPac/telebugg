@@ -9,8 +9,7 @@ const GET_TOP_QUESTIONS = gql`
             }
             title
             notes
-            createDate
-            createTime
+            createdAt
             src
         }
     }

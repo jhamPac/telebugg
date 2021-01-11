@@ -28,8 +28,8 @@ export default function Question({ question }) {
                 ></iframe>
             </div>
             <div>
-                <p style={{ marginBottom: '0px' }}>{`user: ${question.user.name}`}</p>
-                <p>{`posted: ${question.createDate} @ ${question.createTime}`}</p>
+                <p style={{ marginBottom: '0px' }}>{`user: ${question.user.email}`}</p>
+                <p>{`posted: ${question.createdAt}`}</p>
             </div>
             <div>
                 <Link to={`/app/q/view/${question.id}`}>

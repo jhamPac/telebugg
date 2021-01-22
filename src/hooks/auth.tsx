@@ -1,11 +1,18 @@
 import * as React from 'react'
+import useLocalStorage from '@hooks/useLocalStorage'
+import { VerifySuccess } from 'cotter/lib/binder'
 
-const AuthContext = React.createContext()
+const AuthContext = React.createContext({})
 
-function AuthProvider(props) {
+interface P {
+    children: React.ReactNode
+}
+
+function AuthProvider(props: P) {
     const [isLoggedIn, setIsLoggedIn] = React.useState(false)
+    const [token, saveTokenToLocal, removeTokenFromLocal] = useLocalStorage('a_tk')
 
-    const verifyToken = async token => {
+    const verifyToken = async (token: string) => {
         const URL = 'https://worker.cotter.app/verify'
         const body = {
             oauth_token: {
@@ -19,7 +26,7 @@ function AuthProvider(props) {
                 cache: 'no-cache',
                 headers: {
                     'content-type': 'application/json',
-                    API_KEY_ID: process.env.GATSBY_COTTER_API,
+                    API_KEY_ID: `${process.env.GATSBY_COTTER_API}`,
                 },
                 mode: 'cors',
                 body: JSON.stringify(body),
@@ -28,9 +35,7 @@ function AuthProvider(props) {
             if (result.success === true) {
                 setIsLoggedIn(true)
             } else {
-                if (window !== undefined) {
-                    window.localStorage.removeItem('a_tk')
-                }
+                removeTokenFromLocal()
                 setIsLoggedIn(false)
             }
         } catch (err) {
@@ -39,12 +44,6 @@ function AuthProvider(props) {
     }
 
     React.useEffect(() => {
-        if (window === undefined) {
-            setIsLoggedIn(false)
-            return
-        }
-
-        const token = window.localStorage.getItem('a_tk')
         if (token === null) {
             setIsLoggedIn(false)
             return
@@ -53,15 +52,14 @@ function AuthProvider(props) {
         verifyToken(token)
     }, [])
 
-    const saveToken = token => {
+    const saveToken = (token: VerifySuccess) => {
         // go register the user in GCP
         // whether they exist or not
         // if not create the user and return success
         // if user exist just return success
-        if (window !== undefined) {
-            window.localStorage.setItem('a_tk', token.oauth_token.access_token)
-            setIsLoggedIn(true)
-        }
+
+        saveTokenToLocal(token.oauth_token.access_token)
+        setIsLoggedIn(true)
     }
 
     const value = {

@@ -3,7 +3,7 @@ import { CotterAccessToken } from 'cotter-token-js'
 import useLocalStorage from '@hooks/useLocalStorage'
 
 export default function Account(): React.ReactElement | null {
-    const token = useLocalStorage('a_tk')
+    const [token] = useLocalStorage('a_tk')
 
     if (token === null) {
         return null

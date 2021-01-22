@@ -2,11 +2,19 @@ import * as React from 'react'
 import useLocalStorage from '@hooks/useLocalStorage'
 import { VerifySuccess } from 'cotter/lib/binder'
 
-const AuthContext = React.createContext({})
-
 interface P {
     children: React.ReactNode
 }
+
+interface IAuthValue {
+    isLoggedIn: boolean
+    saveToken: (token: VerifySuccess) => void
+}
+
+const AuthContext = React.createContext<IAuthValue>({
+    isLoggedIn: false,
+    saveToken: () => {},
+})
 
 function AuthProvider(props: P) {
     const [isLoggedIn, setIsLoggedIn] = React.useState(false)
@@ -62,7 +70,7 @@ function AuthProvider(props: P) {
         setIsLoggedIn(true)
     }
 
-    const value = {
+    const value: IAuthValue = {
         isLoggedIn,
         saveToken,
     }
@@ -70,7 +78,7 @@ function AuthProvider(props: P) {
     return <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
 }
 
-const useAuth = () => {
+const useAuth = (): IAuthValue => {
     const context = React.useContext(AuthContext)
     if (context === undefined) {
         throw new Error('useAuth must be a child of the AuthProvider')

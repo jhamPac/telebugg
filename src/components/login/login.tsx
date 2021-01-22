@@ -2,12 +2,13 @@ import * as React from 'react'
 import Cotter from 'cotter'
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
+import { RouteComponentProps } from '@reach/router'
 
 import { useAuth } from '@hooks/auth'
 
-export default function Login(props) {
+export default function Login(props: RouteComponentProps) {
     const { saveToken } = useAuth()
-    const [error, setError] = React.useState()
+    const [error, setError] = React.useState<boolean>(false)
 
     const loginFormSetup = async () => {
         try {

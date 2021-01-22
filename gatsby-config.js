@@ -46,7 +46,7 @@ module.exports = {
                     '@hooks': path.resolve(__dirname, 'src/hooks'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
                 },
-                extensions: ['js'],
+                extensions: ['js, ts'],
             },
         },
         {

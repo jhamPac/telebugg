@@ -5,7 +5,7 @@ import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
 
-export default function Home() {
+export default function Home(): React.ReactElement {
     return (
         <main id="landing-page">
             <HeroSection>

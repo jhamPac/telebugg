@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Router } from '@reach/router'
 import { Link, navigate } from 'gatsby'
 import styled from 'styled-components'
+import { RouteComponentProps } from '@reach/router'
 
 import QuestionView from '@components/question/view'
 import PostView from '@components/post/view'
@@ -11,27 +12,27 @@ import Account from '@components/account/dashboard'
 
 import { useAuth } from '@hooks/auth'
 
-const NoMatch = () => {
+const NoMatch = (props: RouteComponentProps) => {
     return (
         <div>
             <h1>LOST?</h1>
-            <StyledLink>
+            <LinkBlock>
                 <span> If you want to head back to the home page click</span>{' '}
                 <Link to="/">
                     <h3>Here</h3>
                 </Link>
-            </StyledLink>
-            <StyledLink>
+            </LinkBlock>
+            <LinkBlock>
                 <span> If you want to post a question</span>{' '}
                 <Link to="/app/p/view">
                     <h3>Here</h3>
                 </Link>
-            </StyledLink>
+            </LinkBlock>
         </div>
     )
 }
 
-const StyledLink = styled(Link)`
+const LinkBlock = styled.div`
     display: block;
     margin-bottom: 32px;
 
@@ -48,27 +49,31 @@ const StyledLink = styled(Link)`
     }
 `
 
-const ProtectRoute = ({ component: Component, location, ...rest }) => {
+type RouteGuardProps = RouteComponentProps & {
+    component: React.FunctionComponent<any>
+}
+
+const ProtectRoute = ({ component: Component, location, ...rest }: RouteGuardProps) => {
     const { isLoggedIn } = useAuth()
-    if (isLoggedIn === false && location.pathname !== '/app/login') {
-        navigate('/app/login', { state: { prevURL: location.pathname } })
+    if (isLoggedIn === false && location?.pathname !== '/app/login') {
+        navigate('/app/login', { state: { prevURL: location?.pathname } })
         return null
     }
 
     return <Component {...rest} />
 }
 
-const LoginCheck = ({ component: Component, location, ...rest }) => {
+const LoginCheck = ({ component: Component, location, ...rest }: RouteGuardProps) => {
     const { isLoggedIn } = useAuth()
-    if (isLoggedIn === true && location.pathname === '/app/login') {
-        navigate('/app/account', { state: { prevURL: location.pathname } })
+    if (isLoggedIn === true && location?.pathname === '/app/login') {
+        navigate('/app/account', { state: { prevURL: location?.pathname } })
         return null
     }
 
     return <Component {...rest} />
 }
 
-export default function App(props) {
+export default function App() {
     return (
         <Router basepath="/app">
             <TopQuestions path="/top-questions" />

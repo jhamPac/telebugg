@@ -13,7 +13,7 @@ export default function Login(props: RouteComponentProps) {
     const loginFormSetup = async () => {
         try {
             const cotter = new Cotter({
-                ApiKeyID: process.env.GATSBY_COTTER_API,
+                ApiKeyID: `${process.env.GATSBY_COTTER_API}`,
                 Styles: {
                     input_label: {
                         color: '#f8f8f2',

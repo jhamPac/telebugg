@@ -8,7 +8,7 @@ import { useAuth } from '@hooks/auth'
 
 function Navbar(props) {
     const { isLoggedIn } = useAuth()
-    console.log(isLoggedIn, 'HATE TESTS')
+
     return (
         <nav className={props.className}>
             <div className="left-nav-items">

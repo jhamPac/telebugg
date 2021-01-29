@@ -12,6 +12,6 @@ describe('Landing page Home component', () => {
         render(<Home />)
         const button = screen.getByRole('button', { name: 'Ask a question' })
         userEvent.click(button)
-        expect(navigate).toHaveBeenCalled()
+        expect(navigate).toHaveBeenCalledWith('/app/p/view')
     })
 })

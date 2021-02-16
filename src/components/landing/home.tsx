@@ -5,7 +5,16 @@ import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
 
+// ethereum
+import { ethers } from 'ethers'
+
+const provider = new ethers.providers.InfuraProvider('homestead', {
+    projectId: process.env.GATSBY_INFURA_ID,
+    projectSecret: process.env.GATSBY_INFURA_S,
+})
+
 export default function Home(): React.ReactElement {
+    console.log(provider.getNetwork())
     return (
         <main id="landing-page">
             <HeroSection>

@@ -10,6 +10,7 @@
     "cotter": "^0.3.26",
     "cotter-token-js": "^0.1.8",
     "cross-fetch": "^3.0.6",
+    "ethers": "^5.0.31",
     "gatsby": "^2.25.3",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-alias-imports": "^1.0.5",

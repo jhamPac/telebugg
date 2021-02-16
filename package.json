@@ -67,11 +67,12 @@
     "start": "gatsby develop -p 9000",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest"
+    "test": "jest",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "commitlint": {

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.0...v1.1.0-beta.1) (2021-02-16)
+
+
+### Docs
+
+* testing husky ([ecbc0fd](https://github.com/gatsbyjs/gatsby-starter-default/commit/ecbc0fd2db0d5aad9d1fac9efb323d5c353abd89))
+
+
+### Others
+
+* husky v5 documentation is kinda lacking ([63e8c52](https://github.com/gatsbyjs/gatsby-starter-default/commit/63e8c5211b0856c0fdb1ced915da58ba1ad73451))
+* setting up husky v5 ([927ec7a](https://github.com/gatsbyjs/gatsby-starter-default/commit/927ec7a78f2620f82940da239a4ceeabb38ad05e))
+* start back over with husky ([5aa9b1d](https://github.com/gatsbyjs/gatsby-starter-default/commit/5aa9b1dbca97fc4e67ffc5818465a41b9e24d581))
+
 ## 1.1.0-beta.0 (2021-02-16)
 
 

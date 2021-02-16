@@ -14,7 +14,15 @@ const provider = new ethers.providers.InfuraProvider('homestead', {
 })
 
 export default function Home(): React.ReactElement {
-    console.log(provider.getNetwork())
+    const consoleNetwork = async () => {
+        const network = await provider.getNetwork()
+        console.log(network)
+    }
+
+    React.useEffect(() => {
+        consoleNetwork()
+    }, [])
+
     return (
         <main id="landing-page">
             <HeroSection>

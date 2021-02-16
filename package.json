@@ -4,12 +4,6 @@
   "description": "A software engineering Q & A website for the 21st century",
   "version": "1.1.0-beta.0",
   "author": "jhamPac <cloud@kevia.me>",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "echo hello"
-    }
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -61,7 +55,6 @@
     "babel-preset-gatsby": "^0.11.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "husky": "^5.0.9",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.1.2",
@@ -79,7 +72,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "release": "standard-version"
+    "release": "standard-version",
+    "lint-commit": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "repository": {
     "type": "git",

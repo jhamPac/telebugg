@@ -43,7 +43,7 @@ module.exports = {
                 alias: {
                     '@assets': path.resolve(__dirname, 'assets'),
                     '@app': path.resolve(__dirname, 'src/app'),
-                    '@hooks': path.resolve(__dirname, 'src/app/shared/hooks'),
+                    '@hooks': path.resolve(__dirname, 'src/app/_shared/hooks'),
                     '@shared': path.resolve(__dirname, 'src/app/_shared'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
                 },

@@ -16,7 +16,7 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "paths": {
-            "@hooks/*": ["./src/app/hooks/*"],
+            "@hooks/*": ["./src/app/shared/hooks/*"],
             "@app/*": ["./src/app/*"]
         }
     },

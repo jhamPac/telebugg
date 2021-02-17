@@ -25,7 +25,9 @@ export default function TopQuestions(props) {
         <div id="home-view">
             <ButtonsContainer>
                 <div>
-                    <button onClick={e => navigate('/app/p/view')}>Ask a question</button>
+                    <button onClick={e => navigate('/router/p/view')}>
+                        Ask a question
+                    </button>
                 </div>
                 <div>
                     <button>Newest</button>

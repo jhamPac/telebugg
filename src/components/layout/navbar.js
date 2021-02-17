@@ -22,11 +22,11 @@ function Navbar(props) {
                     <h3>about</h3>
                 </Link>
                 {isLoggedIn ? (
-                    <Link to="/app/account">
+                    <Link to="/router/account">
                         <h3>account</h3>
                     </Link>
                 ) : (
-                    <Link to="/app/login">
+                    <Link to="/router/login">
                         <h3>login</h3>
                     </Link>
                 )}

@@ -24,7 +24,7 @@ const NoMatch = (props: RouteComponentProps) => {
             </LinkBlock>
             <LinkBlock>
                 <span> If you want to post a question</span>{' '}
-                <Link to="/app/p/view">
+                <Link to="/router/p/view">
                     <h3>Here</h3>
                 </Link>
             </LinkBlock>
@@ -55,8 +55,8 @@ type RouteGuardProps = RouteComponentProps & {
 
 const ProtectRoute = ({ component: Component, location, ...rest }: RouteGuardProps) => {
     const { isLoggedIn } = useAuth()
-    if (isLoggedIn === false && location?.pathname !== '/app/login') {
-        navigate('/app/login', { state: { prevURL: location?.pathname } })
+    if (isLoggedIn === false && location?.pathname !== '/router/login') {
+        navigate('/router/login', { state: { prevURL: location?.pathname } })
         return null
     }
 
@@ -65,8 +65,8 @@ const ProtectRoute = ({ component: Component, location, ...rest }: RouteGuardPro
 
 const LoginCheck = ({ component: Component, location, ...rest }: RouteGuardProps) => {
     const { isLoggedIn } = useAuth()
-    if (isLoggedIn === true && location?.pathname === '/app/login') {
-        navigate('/app/account', { state: { prevURL: location?.pathname } })
+    if (isLoggedIn === true && location?.pathname === '/router/login') {
+        navigate('/router/account', { state: { prevURL: location?.pathname } })
         return null
     }
 

@@ -32,7 +32,7 @@ export default function Question({ question }) {
                 <p>{`posted: ${question.createdAt}`}</p>
             </div>
             <div>
-                <Link to={`/app/q/view/${question.id}`}>
+                <Link to={`/router/q/view/${question.id}`}>
                     <button style={{ cursor: 'pointer' }}>view</button>
                 </Link>
             </div>

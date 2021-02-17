@@ -39,10 +39,10 @@ export default function Home(): React.ReactElement {
                         </p>
                     </div>
                     <div className="button-group">
-                        <button onClick={() => navigate('/app/p/view')}>
+                        <button onClick={() => navigate('/router/p/view')}>
                             Ask a question
                         </button>
-                        <button onClick={() => navigate('/app/top-questions')}>
+                        <button onClick={() => navigate('/router/top-questions')}>
                             View top questions
                         </button>
                     </div>
@@ -136,7 +136,7 @@ export default function Home(): React.ReactElement {
             </WaveDivider>
             <JoinCTA>
                 <h3>Haven't joined yet?</h3>
-                <button onClick={() => navigate('/app/login')}>Get started</button>
+                <button onClick={() => navigate('/router/login')}>Get started</button>
             </JoinCTA>
             <WaveDivider>
                 <svg

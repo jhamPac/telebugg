@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Home from '@components/home'
+import Home from '@app/home'
 
 export default function Main() {
     return <Home />

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-02-17)
+
+
+### Code Refactoring
+
+* place web3 code under the shared dir ([2984bc3](https://github.com/gatsbyjs/gatsby-starter-default/commit/2984bc36485037514e89bbf7668e69e5fdfc450d))
+* wow, need to update aliases in 3 different places: gatsby-config, tsconfig, jest ([9cc2388](https://github.com/gatsbyjs/gatsby-starter-default/commit/9cc2388c6701cb8d62be9413a7ec9f0ca9d95090))
+
 ## [1.1.0-beta.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-02-17)
 
 

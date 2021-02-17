@@ -73,9 +73,9 @@ const LoginCheck = ({ component: Component, location, ...rest }: RouteGuardProps
     return <Component {...rest} />
 }
 
-export default function App() {
+export default function R() {
     return (
-        <Router basepath="/app">
+        <Router basepath="/router">
             <TopQuestions path="/top-questions" />
             <QuestionView path="/q/view/:questionID" />
             <ProtectRoute path="/p/view" component={PostView} />

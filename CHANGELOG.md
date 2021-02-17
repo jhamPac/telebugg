@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2021-02-17)
+
+
+### Code Refactoring
+
+* decided to follow the airbnb react style guide for naming components ([68e0774](https://github.com/gatsbyjs/gatsby-starter-default/commit/68e0774cdd67967d0590f036994441d9dba45f36))
+* move hooks into shared ([5db5510](https://github.com/gatsbyjs/gatsby-starter-default/commit/5db5510eba7104e139c37c2fd04b7bee1e62e9f8))
+* rename components to app ([d8c203c](https://github.com/gatsbyjs/gatsby-starter-default/commit/d8c203cb45e767a2a5910d2bf4ab0f5a54d6ee97))
+* rename main router from App to router ([1a4dae1](https://github.com/gatsbyjs/gatsby-starter-default/commit/1a4dae10b14f4a5d1b49e8e409b8f4622d68b712))
+* trying out a new naming scheme ([25c7354](https://github.com/gatsbyjs/gatsby-starter-default/commit/25c73546de04814ce4a85bfde35537ac68986723))
+* update hooks alias ([6322dc0](https://github.com/gatsbyjs/gatsby-starter-default/commit/6322dc056ebc9b562f77230ae2af654b9c3b65a5))
+* update instances of app to router; might need to create a static variable for this ([92b19be](https://github.com/gatsbyjs/gatsby-starter-default/commit/92b19be11bf9a1a3e39fc3d6d5c0afcc76a02940))
+* update paths with the app alias ([69f78df](https://github.com/gatsbyjs/gatsby-starter-default/commit/69f78df510dee5a738b2c5a6ae97c59e68f06933))
+
 ## [1.1.0-beta.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.0...v1.1.0-beta.1) (2021-02-16)
 
 

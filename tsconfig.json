@@ -17,7 +17,8 @@
         "jsx": "react-jsx",
         "paths": {
             "@hooks/*": ["./src/app/shared/hooks/*"],
-            "@app/*": ["./src/app/*"]
+            "@app/*": ["./src/app/*"],
+            "@shared/*": ["./src/app/shared/*"]
         }
     },
     "include": ["src", "src/@types/*"]

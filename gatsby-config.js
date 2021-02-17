@@ -44,6 +44,7 @@ module.exports = {
                     '@assets': path.resolve(__dirname, 'assets'),
                     '@app': path.resolve(__dirname, 'src/app'),
                     '@hooks': path.resolve(__dirname, 'src/app/shared/hooks'),
+                    '@shared': path.resolve(__dirname, 'src/app/shared'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
                 },
                 extensions: ['js, ts'],

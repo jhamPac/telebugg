@@ -5,13 +5,7 @@ import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
 
-// ethereum
-import { ethers } from 'ethers'
-
-const provider = new ethers.providers.InfuraProvider('homestead', {
-    projectId: process.env.GATSBY_INFURA_ID,
-    projectSecret: process.env.GATSBY_INFURA_S,
-})
+import provider from '@shared/web3/provider'
 
 export default function Home(): React.ReactElement {
     const consoleNetwork = async () => {

@@ -4,11 +4,11 @@ import { Link, navigate } from 'gatsby'
 import styled from 'styled-components'
 import { RouteComponentProps } from '@reach/router'
 
-import QuestionView from '@components/question/view'
-import PostView from '@components/post/view'
-import Login from '@components/login/login'
-import TopQuestions from '@components/top-questions/topQuestions'
-import Account from '@components/account/dashboard'
+import QuestionView from '@app/question/view'
+import PostView from '@app/post/view'
+import Login from '@app/login/login'
+import TopQuestions from '@app/top-questions/topQuestions'
+import Account from '@app/account/dashboard'
 
 import { useAuth } from '@hooks/auth'
 

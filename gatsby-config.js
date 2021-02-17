@@ -42,7 +42,7 @@ module.exports = {
             options: {
                 alias: {
                     '@assets': path.resolve(__dirname, 'assets'),
-                    '@components': path.resolve(__dirname, 'src/components'),
+                    '@app': path.resolve(__dirname, 'src/app'),
                     '@hooks': path.resolve(__dirname, 'src/hooks'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
                 },

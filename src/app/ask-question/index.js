@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import useMediaRecorder from '@hooks/media/useMediaRecorder'
 
-export default function Post(props) {
+export default function AskQuestion(props) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
     return (
         <div id="post-view">

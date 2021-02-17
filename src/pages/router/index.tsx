@@ -4,10 +4,10 @@ import { Link, navigate } from 'gatsby'
 import styled from 'styled-components'
 import { RouteComponentProps } from '@reach/router'
 
-import QuestionView from '@app/question/view'
-import PostView from '@app/post/view'
-import Login from '@app/login/login'
-import TopQuestions from '@app/top-questions/topQuestions'
+import ViewQuestion from '@app/view-question'
+import AskQuestion from '@app/ask-question'
+import Login from '@app/login'
+import QuestionsFeed from '@app/questions-feed'
 import Account from '@app/account/dashboard'
 
 import { useAuth } from '@hooks/auth'
@@ -76,9 +76,9 @@ const LoginCheck = ({ component: Component, location, ...rest }: RouteGuardProps
 export default function R() {
     return (
         <Router basepath="/router">
-            <TopQuestions path="/top-questions" />
-            <QuestionView path="/q/view/:questionID" />
-            <ProtectRoute path="/p/view" component={PostView} />
+            <QuestionsFeed path="/top-questions" />
+            <ViewQuestion path="/q/view/:questionID" />
+            <ProtectRoute path="/p/view" component={AskQuestion} />
             <ProtectRoute path="/account" component={Account} />
             <LoginCheck path="/login" component={Login} />
             <NoMatch default />

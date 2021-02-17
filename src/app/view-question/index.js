@@ -6,7 +6,7 @@ import { GET_QUESTION } from './queries'
 
 import ReplyRow from './replyrow'
 
-export default function QView(props) {
+export default function ViewQuestion(props) {
     const { data, error, loading } = useQuery(GET_QUESTION, {
         variables: { id: Number(props.questionID) },
     })

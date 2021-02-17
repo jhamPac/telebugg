@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.3...v1.1.0-beta.4) (2021-02-17)
+
+
+### Code Refactoring
+
+* place a underscore prefix to shared so its at the top of the directory ([9b03e04](https://github.com/gatsbyjs/gatsby-starter-default/commit/9b03e042a003ac4aadc245388c478ffc68648393))
+
 ## [1.1.0-beta.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.2...v1.1.0-beta.3) (2021-02-17)
 
 

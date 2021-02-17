@@ -2,7 +2,7 @@
   "name": "telebugg",
   "private": true,
   "description": "A software engineering Q & A website for the 21st century",
-  "version": "1.1.0-beta.3",
+  "version": "1.1.0-beta.4",
   "author": "jhamPac <cloud@kevia.me>",
   "commitlint": {
     "extends": [

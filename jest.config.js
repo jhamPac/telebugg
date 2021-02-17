@@ -7,7 +7,7 @@ module.exports = {
         '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__mocks__/file-mock.js`,
         '^@app/(.*)$': '<rootDir>/src/app/$1',
         '^@hooks/(.*)$': '<rootDir>/src/app/shared/hooks/$1',
-        '^@shared/(.*)$': '<rootDir>/src/app/shared/$1',
+        '^@shared/(.*)$': '<rootDir>/src/app/_shared/$1',
     },
     testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
     transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],

@@ -18,7 +18,7 @@
         "paths": {
             "@hooks/*": ["./src/app/shared/hooks/*"],
             "@app/*": ["./src/app/*"],
-            "@shared/*": ["./src/app/shared/*"]
+            "@shared/*": ["./src/app/_shared/*"]
         }
     },
     "include": ["src", "src/@types/*"]

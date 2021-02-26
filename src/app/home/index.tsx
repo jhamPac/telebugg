@@ -13,9 +13,7 @@ export default function Home(): React.ReactElement {
         console.log(network)
     }
 
-    React.useEffect(() => {
-        consoleNetwork()
-    }, [])
+    React.useEffect(() => {}, [])
 
     return (
         <main id="landing-page">

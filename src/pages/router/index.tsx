@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 import { Link, navigate } from 'gatsby'
 import styled from 'styled-components'
 import { RouteComponentProps } from '@reach/router'
+import Web3 from 'web3'
 
 import ViewQuestion from '@app/view-question'
 import AskQuestion from '@app/ask-question'
@@ -11,6 +12,7 @@ import QuestionsFeed from '@app/questions-feed'
 import Account from '@app/account/dashboard'
 
 import { useAuth } from '@hooks/auth'
+import useContract from '@shared/web3/voting.ts'
 
 const NoMatch = (props: RouteComponentProps) => {
     return (
@@ -73,14 +75,36 @@ const LoginCheck = ({ component: Component, location, ...rest }: RouteGuardProps
     return <Component {...rest} />
 }
 
+function Voting(props: RouteComponentProps) {
+    const { contract } = useContract()
+    const [c, setC] = React.useState(0)
+
+    const getContract = async () => {
+        const count = await contract.methods
+            .totalVotesFor(Web3.utils.fromAscii('alice'))
+            .call()
+
+        setC(count)
+    }
+
+    React.useEffect(() => {
+        getContract()
+    }, [])
+
+    return <div>{`Alice has ${c} votes`}</div>
+}
+
 export default function R() {
     return (
         <Router basepath="/router">
             <QuestionsFeed path="/top-questions" />
             <ViewQuestion path="/q/view/:questionID" />
+            <Voting path="/vote" />
+
             <ProtectRoute path="/p/view" component={AskQuestion} />
             <ProtectRoute path="/account" component={Account} />
             <LoginCheck path="/login" component={Login} />
+
             <NoMatch default />
         </Router>
     )

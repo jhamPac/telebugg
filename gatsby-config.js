@@ -20,6 +20,12 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-typescript`,
         {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./src/app/_shared/web3/contract`,
+            },
+        },
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `telebugg`,

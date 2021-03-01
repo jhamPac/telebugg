@@ -2,7 +2,7 @@ import * as React from 'react'
 import Web3 from 'web3'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const web3 = new Web3('http://127.0.0.1:7545')
+const web3 = new Web3('http://127.0.0.1:8545')
 
 interface VoteContract {
     getTotalVotes: (name: string) => Promise<any>
@@ -47,16 +47,13 @@ export default function useContract(): [VoteContract, boolean, boolean] {
 
     const c = {
         getTotalVotes: async (name: string): Promise<any> => {
-            setLoading(true)
             try {
                 const result = await contract.methods
                     .totalVotesFor(Web3.utils.fromAscii(name))
                     .call()
-                setLoading(false)
+
                 return result
             } catch (error) {
-                setLoading(false)
-                setError(true)
                 return 0
             }
         },

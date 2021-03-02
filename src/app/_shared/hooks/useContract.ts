@@ -8,17 +8,7 @@ interface VoteContract {
     getTotalVotes: (name: string) => Promise<any>
 }
 
-export default function useContract(): [VoteContract, boolean, boolean] {
-    const [loading, setLoading] = React.useState(false)
-    const [error, setError] = React.useState(false)
-
-    const accounts = async () => {
-        const a = await web3.eth.getAccounts()
-        console.log(a[0], 'the first account')
-    }
-
-    accounts()
-
+export default function useContract(): VoteContract {
     const { allContractJson } = useStaticQuery(
         graphql`
             query MyQuery {
@@ -49,7 +39,7 @@ export default function useContract(): [VoteContract, boolean, boolean] {
 
     const contract = new web3.eth.Contract(
         allContractJson.nodes[0].abi,
-        '0xC12722dA98A3856171385995244864d0cD065143'
+        '0x807688a799cAaE52C9915C974F2CC78B0EfF2D9E'
     )
 
     const c = {
@@ -66,5 +56,5 @@ export default function useContract(): [VoteContract, boolean, boolean] {
         },
     }
 
-    return [c, loading, error]
+    return c
 }

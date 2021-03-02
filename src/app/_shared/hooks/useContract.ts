@@ -2,7 +2,7 @@ import * as React from 'react'
 import Web3 from 'web3'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const web3 = new Web3('http://127.0.0.1:8545')
+const web3 = new Web3('http://localhost:8545')
 
 interface VoteContract {
     getTotalVotes: (name: string) => Promise<any>
@@ -11,6 +11,13 @@ interface VoteContract {
 export default function useContract(): [VoteContract, boolean, boolean] {
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState(false)
+
+    const accounts = async () => {
+        const a = await web3.eth.getAccounts()
+        console.log(a[0], 'the first account')
+    }
+
+    accounts()
 
     const { allContractJson } = useStaticQuery(
         graphql`

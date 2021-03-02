@@ -5,16 +5,7 @@ import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
 
-import provider from '@shared/web3/provider'
-
 export default function Home(): React.ReactElement {
-    const consoleNetwork = async () => {
-        const network = await provider.getNetwork()
-        console.log(network)
-    }
-
-    React.useEffect(() => {}, [])
-
     return (
         <main id="landing-page">
             <HeroSection>

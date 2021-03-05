@@ -12,7 +12,7 @@ function CandidateRow(props: { name: string }) {
     const syncWithBlockchain = async () => {
         try {
             const count = await contract.getTotalVotes(props.name)
-            setCount(parseInt(count))
+            setCount(count)
         } catch (error) {
             setCount(0)
         }

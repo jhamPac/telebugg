@@ -3,7 +3,7 @@ import { RouteComponentProps } from '@reach/router'
 
 import useContract from '@hooks/useContract'
 
-const CANDIDATES = ['alice', 'bob', 'eve'] // where does this come from??
+const CANDIDATES_NAMES = ['alice', 'bob', 'eve'] // where does this come from??
 
 function CandidateRow(props: { name: string }) {
     const contract = useContract()
@@ -22,7 +22,7 @@ function CandidateRow(props: { name: string }) {
         syncWithBlockchain()
     }, [])
 
-    const voteHandler = async e => {
+    const voteHandler = async () => {
         const success = await contract.voteFor(props.name)
 
         if (success) {
@@ -42,8 +42,8 @@ function CandidateRow(props: { name: string }) {
 export default function Voting(props: RouteComponentProps) {
     return (
         <div style={{ paddingTop: '64px' }}>
-            {CANDIDATES.map(candidate => (
-                <CandidateRow name={candidate} />
+            {CANDIDATES_NAMES.map(cn => (
+                <CandidateRow name={cn} />
             ))}
         </div>
     )

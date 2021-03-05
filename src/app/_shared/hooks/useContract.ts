@@ -76,8 +76,6 @@ export default function useContract(): VoteContract {
                     createTx.rawTransaction as string
                 )
 
-                console.log(receipt)
-
                 return true
             } catch (error) {
                 return false

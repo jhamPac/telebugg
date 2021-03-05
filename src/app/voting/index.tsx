@@ -29,6 +29,7 @@ function CandidateRow(props: { name: string }) {
             setCount(count + 1)
         }
     }
+
     return (
         <div style={{ marginBottom: '64px' }}>
             <h3>{`${props.name} has ${count} votes`}</h3>

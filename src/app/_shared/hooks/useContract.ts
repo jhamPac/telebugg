@@ -1,16 +1,42 @@
 import * as React from 'react'
 import Web3 from 'web3'
-import { useStaticQuery } from 'gatsby'
-import { GET_CONTRACT } from './queries'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const web3 = new Web3('http://localhost:8545')
 
 interface VoteContract {
     getTotalVotes: (name: string) => Promise<any>
+    voteFor: (name: string) => Promise<boolean>
 }
 
 export default function useContract(): VoteContract {
-    const { allContractJson } = useStaticQuery(GET_CONTRACT)
+    const { allContractJson } = useStaticQuery(
+        graphql`
+            query MyQuery {
+                allContractJson {
+                    nodes {
+                        abi {
+                            constant
+                            inputs {
+                                internalType
+                                name
+                                type
+                            }
+                            outputs {
+                                internalType
+                                name
+                                type
+                            }
+                            name
+                            payable
+                            stateMutability
+                            type
+                        }
+                    }
+                }
+            }
+        `
+    )
 
     const contract = new web3.eth.Contract(
         allContractJson.nodes[0].abi,
@@ -27,6 +53,34 @@ export default function useContract(): VoteContract {
                 return result
             } catch (error) {
                 return 0
+            }
+        },
+
+        voteFor: async (name: string): Promise<boolean> => {
+            try {
+                const tx = await contract.methods.voteForCandidate(
+                    Web3.utils.fromAscii(name)
+                )
+
+                const createTx = await web3.eth.accounts.signTransaction(
+                    {
+                        from: '0x9a1b9f951e61fD34ce9414D0eba09b4C76750e6E', // this would normally be from the browser wallet
+                        to: contract.options.address,
+                        data: tx.encodeABI(),
+                        gas: await tx.estimateGas(),
+                    },
+                    '0x53382a69ea87df06afe7338256891d965b626278515cde11d3be7c5546e61376'
+                )
+
+                const receipt = await web3.eth.sendSignedTransaction(
+                    createTx.rawTransaction as string
+                )
+
+                console.log(receipt)
+
+                return true
+            } catch (error) {
+                return false
             }
         },
     }

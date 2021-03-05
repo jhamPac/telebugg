@@ -3,13 +3,15 @@ import { RouteComponentProps } from '@reach/router'
 
 import useContract from '@hooks/useContract'
 
-export default function Voting(props: RouteComponentProps) {
+const CANDIDATES = ['alice', 'bob', 'eve'] // where does this come from??
+
+function CandidateRow(props: { name: string }) {
     const contract = useContract()
     const [count, setCount] = React.useState(0)
 
     const syncWithBlockchain = async () => {
         try {
-            const count = await contract.getTotalVotes('alice')
+            const count = await contract.getTotalVotes(props.name)
             setCount(parseInt(count))
         } catch (error) {
             setCount(0)
@@ -21,19 +23,28 @@ export default function Voting(props: RouteComponentProps) {
     }, [])
 
     const voteHandler = async e => {
-        const success = await contract.voteFor('alice')
+        const success = await contract.voteFor(props.name)
 
         if (success) {
             setCount(count + 1)
         }
     }
-
     return (
-        <div>
-            <h3>{`Alice has ${count} votes`}</h3>
+        <div style={{ marginBottom: '64px' }}>
+            <h3>{`${props.name} has ${count} votes`}</h3>
             <button style={{ cursor: 'pointer' }} onClick={voteHandler}>
                 vote
             </button>
+        </div>
+    )
+}
+
+export default function Voting(props: RouteComponentProps) {
+    return (
+        <div style={{ paddingTop: '64px' }}>
+            {CANDIDATES.map(candidate => (
+                <CandidateRow name={candidate} />
+            ))}
         </div>
     )
 }

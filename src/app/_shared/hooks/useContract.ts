@@ -72,9 +72,7 @@ export default function useContract(): VoteContract {
                     '0x53382a69ea87df06afe7338256891d965b626278515cde11d3be7c5546e61376'
                 )
 
-                const receipt = await web3.eth.sendSignedTransaction(
-                    createTx.rawTransaction as string
-                )
+                await web3.eth.sendSignedTransaction(createTx.rawTransaction as string)
 
                 return true
             } catch (error) {

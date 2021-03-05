@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Web3 from 'web3'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery } from 'gatsby'
+import { GET_CONTRACT } from './queries'
 
 const web3 = new Web3('http://localhost:8545')
 
@@ -9,33 +10,7 @@ interface VoteContract {
 }
 
 export default function useContract(): VoteContract {
-    const { allContractJson } = useStaticQuery(
-        graphql`
-            query MyQuery {
-                allContractJson {
-                    nodes {
-                        abi {
-                            constant
-                            inputs {
-                                internalType
-                                name
-                                type
-                            }
-                            outputs {
-                                internalType
-                                name
-                                type
-                            }
-                            name
-                            payable
-                            stateMutability
-                            type
-                        }
-                    }
-                }
-            }
-        `
-    )
+    const { allContractJson } = useStaticQuery(GET_CONTRACT)
 
     const contract = new web3.eth.Contract(
         allContractJson.nodes[0].abi,

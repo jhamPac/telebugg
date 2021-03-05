@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client'
+import { graphql } from 'gatsby'
 
-const GET_QUESTION = gql`
+const GET_QUESTION = graphql`
     query QuestionByID($id: ID!) {
         question: questionByID(id: $id) {
             title

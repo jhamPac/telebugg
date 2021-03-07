@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { render, screen, wait, waitFor } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import CandidateRow from '../candidate-row'
+import useContract from '@hooks/useContract'
 
 // mocks
 jest.mock('@hooks/useContract', () => ({
@@ -14,6 +15,7 @@ describe('CandidateRow component', () => {
     test('candidate should have 1 vote', async () => {
         render(<CandidateRow name="alice" />)
         const voteText = await waitFor(() => screen.getByText(/alice has 1 votes/i))
-        expect(voteText).toBeInTheDocument()
+        const x = useContract()
+        expect(x.getTotalVotes).toHaveBeenCalled()
     })
 })

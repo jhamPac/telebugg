@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const web3 = new Web3('http://localhost:8545')
 
 export interface iVoteContract {
+    getAllCandidates: () => Promise<[error: boolean, data: string[]]>
     getTotalVotes: (name: string) => Promise<number>
     voteFor: (name: string) => Promise<boolean>
 }
@@ -43,6 +44,10 @@ export default function useContract(): iVoteContract {
     )
 
     const c = {
+        getAllCandidates: async (): Promise<[error: boolean, data: string[]]> => {
+            return Promise.resolve([false, ['alice', 'bob', 'eve']])
+        },
+
         getTotalVotes: async (name: string): Promise<number> => {
             try {
                 const result = await contract.methods

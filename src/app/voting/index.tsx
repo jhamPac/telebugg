@@ -4,15 +4,40 @@ import useContract from '@hooks/useContract'
 
 import CandidateRow from './candidate-row'
 
-const CANDIDATES_NAMES = ['alice', 'bob', 'eve'] // where does this come from??
-
 export default function Voting(props: RouteComponentProps) {
+    const [candidates, setCandidates] = React.useState<string[]>([])
+    const [error, setError] = React.useState(false)
     const contract = useContract()
+
+    const syncWithBlockchain = async () => {
+        const [error, list] = await contract.getAllCandidates()
+        console.log(list)
+
+        if (error) {
+            setError(error)
+            return
+        }
+
+        setCandidates(list)
+    }
+
+    React.useEffect(() => {
+        syncWithBlockchain()
+    }, [])
+
+    if (error) {
+        return <div>Oops there was an error!</div>
+    }
+
     return (
         <div style={{ paddingTop: '64px' }}>
-            {CANDIDATES_NAMES.map(cn => (
-                <CandidateRow contract={contract} name={cn} />
-            ))}
+            {candidates.length === 0 ? (
+                <h2>Loading...</h2>
+            ) : (
+                candidates.map((cn, i) => (
+                    <CandidateRow key={i} contract={contract} name={cn} />
+                ))
+            )}
         </div>
     )
 }

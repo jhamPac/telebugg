@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const web3 = new Web3('http://localhost:8545')
 
-interface VoteContract {
+export interface iVoteContract {
     getTotalVotes: (name: string) => Promise<number>
     voteFor: (name: string) => Promise<boolean>
 }
 
-export default function useContract(): VoteContract {
+export default function useContract(): iVoteContract {
     const { allContractJson } = useStaticQuery(
         graphql`
             query MyQuery {

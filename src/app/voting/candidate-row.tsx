@@ -1,13 +1,12 @@
 import * as React from 'react'
-import useContract from '@hooks/useContract'
+import { iVoteContract } from '@hooks/useContract'
 
-export default function CandidateRow(props: { name: string }) {
-    const contract = useContract()
+export default function CandidateRow(props: { name: string; contract: iVoteContract }) {
     const [count, setCount] = React.useState(0)
 
     const syncWithBlockchain = async () => {
         try {
-            const count = await contract.getTotalVotes(props.name)
+            const count = await props.contract.getTotalVotes(props.name)
             setCount(count)
         } catch (error) {
             setCount(0)
@@ -19,7 +18,7 @@ export default function CandidateRow(props: { name: string }) {
     }, [])
 
     const voteHandler = async () => {
-        const success = await contract.voteFor(props.name)
+        const success = await props.contract.voteFor(props.name)
 
         if (success) {
             setCount(count + 1)

@@ -23,6 +23,7 @@ describe('CandidateRow component', () => {
     test('up vote should have been pressed', async () => {
         const spy = jest.spyOn(mockContract, 'voteFor')
         testRender()
+
         const voteButton = await waitFor(() =>
             screen.getByRole('button', { name: /vote/i })
         )

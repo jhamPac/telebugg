@@ -5,7 +5,7 @@ const web3 = new Web3('http://localhost:8545')
 
 export interface iVoteContract {
     getAllCandidates: () => Promise<[error: boolean, data: string[]]>
-    getTotalVotes: (name: string) => Promise<number>
+    getTotalVotes: (name: string) => Promise<[error: boolean, data: number]>
     voteFor: (name: string) => Promise<boolean>
 }
 
@@ -48,15 +48,15 @@ export default function useContract(): iVoteContract {
             return Promise.resolve([false, ['alice', 'bob', 'eve']])
         },
 
-        getTotalVotes: async (name: string): Promise<number> => {
+        getTotalVotes: async (name: string): Promise<[error: boolean, data: number]> => {
             try {
                 const result = await contract.methods
                     .totalVotesFor(Web3.utils.fromAscii(name))
                     .call()
 
-                return parseInt(result)
+                return [false, parseInt(result)]
             } catch (error) {
-                return 0
+                return [true, 0]
             }
         },
 

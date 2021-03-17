@@ -5,7 +5,7 @@ import CandidateRow from '../candidate-row'
 
 // mocks
 const mockContract = {
-    getTotalVotes: name => Promise.resolve(1),
+    getTotalVotes: name => Promise.resolve([false, 5]),
     voteFor: name => Promise.resolve(true),
 }
 
@@ -16,7 +16,7 @@ function testRender() {
 describe('CandidateRow component', () => {
     test('candidate should have 1 vote', async () => {
         testRender()
-        const voteText = await waitFor(() => screen.getByText(/alice has 1 votes/i))
+        const voteText = await waitFor(() => screen.getByText(/alice has 5 votes/i))
         expect(voteText).toBeInTheDocument()
     })
 

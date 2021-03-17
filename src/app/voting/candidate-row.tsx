@@ -5,11 +5,12 @@ export default function CandidateRow(props: { name: string; contract: iVoteContr
     const [count, setCount] = React.useState(0)
 
     const syncWithBlockchain = async () => {
-        try {
-            const count = await props.contract.getTotalVotes(props.name)
-            setCount(count)
-        } catch (error) {
+        const [error, count] = await props.contract.getTotalVotes(props.name)
+
+        if (error) {
             setCount(0)
+        } else {
+            setCount(count)
         }
     }
 

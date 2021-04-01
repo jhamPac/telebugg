@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const web3 = new Web3('http://localhost:8545')
 
-export interface iVoteContract {
+export type iVoteContract = {
     getAllCandidates: () => Promise<[error: boolean, data: string[]]>
     getTotalVotes: (name: string) => Promise<[error: boolean, data: number]>
     voteFor: (name: string) => Promise<boolean>

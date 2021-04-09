@@ -2,11 +2,9 @@ FROM node:14
 
 WORKDIR /usr/frontend
 
-COPY package*.json ./
+COPY . ./
 
 RUN npm install
-
-ADD . ./
 
 EXPOSE 8080
 

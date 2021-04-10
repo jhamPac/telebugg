@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /usr/frontend
+WORKDIR /usr/src
 
 COPY . ./
 

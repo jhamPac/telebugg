@@ -1,6 +1,6 @@
 import * as React from 'react'
-import LandingPage from '@components/landing/home'
+import Home from '@app/home'
 
 export default function Main() {
-    return <LandingPage />
+    return <Home />
 }

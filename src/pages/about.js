@@ -21,9 +21,6 @@ export default function About() {
                     ></iframe>
                 </Video>
             </VideoWrapper>
-            <Team>
-                <h2>Meet the team</h2>
-            </Team>
         </div>
     )
 }

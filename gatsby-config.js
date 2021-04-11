@@ -1,5 +1,5 @@
 require('dotenv').config({
-    path: `.env.${process.env.NODE_ENV}`,
+    path: `.env`,
 })
 const path = require('path')
 
@@ -18,6 +18,13 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-json`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-typescript`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./src/app/_shared/web3/contract`,
+            },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -41,11 +48,12 @@ module.exports = {
             options: {
                 alias: {
                     '@assets': path.resolve(__dirname, 'assets'),
-                    '@components': path.resolve(__dirname, 'src/components'),
-                    '@hooks': path.resolve(__dirname, 'src/hooks'),
+                    '@app': path.resolve(__dirname, 'src/app'),
+                    '@hooks': path.resolve(__dirname, 'src/app/_shared/hooks'),
+                    '@shared': path.resolve(__dirname, 'src/app/_shared'),
                     '@srcRoot': path.resolve(__dirname, 'src'),
                 },
-                extensions: ['js'],
+                extensions: ['js, ts'],
             },
         },
         {

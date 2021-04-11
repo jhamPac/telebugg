@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.5...v1.1.0) (2021-04-11)
+
+
+### Features
+
+* reading data from the ganache blockchain ([7f40096](https://github.com/gatsbyjs/gatsby-starter-default/commit/7f4009616fa70ca1260b545433106d7292e4a116))
+* voting from the ui works ([619db90](https://github.com/gatsbyjs/gatsby-starter-default/commit/619db90db5090b5debec780bbbd9eb64738b029d))
+
+
+### Tests
+
+* candidate row first test ([8d9e5f8](https://github.com/gatsbyjs/gatsby-starter-default/commit/8d9e5f8477c0d66f3ad4da4fc7dbaa12f9bec2bd))
+* made candidate row eaiser to test with dep injection ([317dc29](https://github.com/gatsbyjs/gatsby-starter-default/commit/317dc29abcd7fba919547e3b1e900ea96decee2a))
+* making cadidate row easier to test ([d6380b5](https://github.com/gatsbyjs/gatsby-starter-default/commit/d6380b52e3c09113c92233f04a46a10214235554))
+* minor spacing ([58f3383](https://github.com/gatsbyjs/gatsby-starter-default/commit/58f3383e4abcc59e0444f2c3145cfacc65361a8c))
+* test works ([9f26ec5](https://github.com/gatsbyjs/gatsby-starter-default/commit/9f26ec5d05877ca9f84b6ba250bba19bfb2db2c0))
+* testing fn implementation ([44fca83](https://github.com/gatsbyjs/gatsby-starter-default/commit/44fca8347c83f117753d041cf83914e332e31476))
+
+
+### Code Refactoring
+
+* change interface into type ([c9554c5](https://github.com/gatsbyjs/gatsby-starter-default/commit/c9554c591167ae3e2e8642f096b78b10401007df))
+* minor spacing ([5242e03](https://github.com/gatsbyjs/gatsby-starter-default/commit/5242e039343bcdaab6d96349e662b7ce0fb10bbf))
+* remove event parameter from click handler ([f57f846](https://github.com/gatsbyjs/gatsby-starter-default/commit/f57f84606f96e8855ff3e8a45e8ea5dd2e1b4405))
+* renamed types directory ([b98a936](https://github.com/gatsbyjs/gatsby-starter-default/commit/b98a936c1d3964e767e140f29c1f2f2226311954))
+* save point ([6df3b7f](https://github.com/gatsbyjs/gatsby-starter-default/commit/6df3b7fe4fa69b931abdcd6114793c353fc96a59))
+* separate out queries ([2f92eaf](https://github.com/gatsbyjs/gatsby-starter-default/commit/2f92eaf54dccb3c9a1b85aa2a9344380c7fca5a9))
+* solid ify code ([c6f5668](https://github.com/gatsbyjs/gatsby-starter-default/commit/c6f5668ef1cc7331051563eccabfe9a5a764294d))
+* update vote contract method to return a tuple or multiple returns; this allows for error checking ([a2b4c89](https://github.com/gatsbyjs/gatsby-starter-default/commit/a2b4c89fc2c3a8e934adcf0d5632ea2634a562a9))
+
+
+### Others
+
+* checking to see if npm still works ([61d498c](https://github.com/gatsbyjs/gatsby-starter-default/commit/61d498c1b3b9eb248e57b02e1b469f9035c1f78e))
+* install userevent for testing ([758e780](https://github.com/gatsbyjs/gatsby-starter-default/commit/758e7803017ac52796feaeb96edb7dd2dbc417aa))
+* mock login page ([d58ab14](https://github.com/gatsbyjs/gatsby-starter-default/commit/d58ab1416cbba336acb29bddf8b3ab1234c51d46))
+* mock the top question feed and the view for single questions ([71383dd](https://github.com/gatsbyjs/gatsby-starter-default/commit/71383dd272bb89a160b0e0abf3fecf3250b0b0f8))
+* remove debug code ([2bfd1cd](https://github.com/gatsbyjs/gatsby-starter-default/commit/2bfd1cdf2d1183766f446dd1f60532c7b8283501))
+* remove ethers and providers object ([74eb1f8](https://github.com/gatsbyjs/gatsby-starter-default/commit/74eb1f80bcb8f0d6ffe7e38355c20c525d783efb))
+* remove meet the team section ([060124e](https://github.com/gatsbyjs/gatsby-starter-default/commit/060124efa1e779d5c159008a04963fc431ec5719))
+* save at a sane spot ([e59a250](https://github.com/gatsbyjs/gatsby-starter-default/commit/e59a25088279abc66ce15f84093535dd5f85ccd5))
+* save from last night ([c99902a](https://github.com/gatsbyjs/gatsby-starter-default/commit/c99902a00f317ac48dd5c955e4eac82c95748349))
+* save point ([072797c](https://github.com/gatsbyjs/gatsby-starter-default/commit/072797ca221533b78b39434dbe2c0b09668c7199))
+* simplify dockerfile ([735860a](https://github.com/gatsbyjs/gatsby-starter-default/commit/735860a89bb4b48c1dffbc08c3b5435bcb86ab2d))
+* simplify working dir ([b47a827](https://github.com/gatsbyjs/gatsby-starter-default/commit/b47a827c3773fe13c93b616346186ea8bb231328))
+* slim docker image down ([ff3231f](https://github.com/gatsbyjs/gatsby-starter-default/commit/ff3231fd111d7e7bbaa1a903cff4b91d3ccee89a))
+* update contract address ([58cbda7](https://github.com/gatsbyjs/gatsby-starter-default/commit/58cbda70be63df08d60d01152b1a69b91458965d))
+* update gatsby because the socketio might have a cors issue ([64d47ee](https://github.com/gatsbyjs/gatsby-starter-default/commit/64d47eee3fcd9035d69eedcf5e46eba70d0aea11))
+
 ## [1.1.0-beta.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.4...v1.1.0-beta.5) (2021-02-17)
 
 

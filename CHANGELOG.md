@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0...v1.1.1) (2021-04-11)
+
+
+### Others
+
+* add electron as a dep ([da75335](https://github.com/gatsbyjs/gatsby-starter-default/commit/da753355551c93c0c1724bb53181bc808d341472))
+
 ## [1.1.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0-beta.5...v1.1.0) (2021-04-11)
 
 

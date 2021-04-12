@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.1...v1.1.2) (2021-04-12)
+
+
+### Others
+
+* fresh install ([0011202](https://github.com/gatsbyjs/gatsby-starter-default/commit/0011202b0e0d1acdf4113ceea82ee18ff89809b6))
+
+
+### Tests
+
+* add test for wave-divider ([2233adf](https://github.com/gatsbyjs/gatsby-starter-default/commit/2233adf95d668fae5647e4515c8437bd480f6881))
+
+
+### Code Refactoring
+
+* add appropriate path instructions for each position ([6e2b741](https://github.com/gatsbyjs/gatsby-starter-default/commit/6e2b741622088e891a4a3b849979e4feb4e37396))
+* separate out wave divider as its own component ([4e5fd3a](https://github.com/gatsbyjs/gatsby-starter-default/commit/4e5fd3af2c0f02b62f66bed691e4f18cc5bdb077))
+
 ### [1.1.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.0...v1.1.1) (2021-04-11)
 
 

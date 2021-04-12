@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
+import WaveDivider from './wave-divider'
 import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
@@ -44,20 +45,9 @@ export default function Home(): React.ReactElement {
                     </p>
                 </div>
             </FeatureSection>
-            <WaveDivider>
-                <svg
-                    data-name="bottom-wave"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                    fill="currentColor"
-                >
-                    <path
-                        className="shape-fill"
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                    ></path>
-                </svg>
-            </WaveDivider>
+
+            <WaveDivider position="bottom-wave" />
+
             <QuoteSection>
                 <h3>
                     I just wanted to create a place where anyone can ask a software
@@ -77,20 +67,9 @@ export default function Home(): React.ReactElement {
                     -
                 </h4>
             </QuoteSection>
-            <WaveDivider>
-                <svg
-                    data-name="top-wave"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                    fill="currentColor"
-                >
-                    <path
-                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                        className="shape-fill"
-                    ></path>
-                </svg>
-            </WaveDivider>
+
+            <WaveDivider position="top-wave" />
+
             <FeatureSection>
                 <div className="description">
                     <h2>Answer back and connect</h2>
@@ -103,38 +82,16 @@ export default function Home(): React.ReactElement {
                     <ConnectSVG />
                 </div>
             </FeatureSection>
-            <WaveDivider>
-                <svg
-                    data-name="bottom-wave"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                    fill="currentColor"
-                >
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        className="shape-fill"
-                    ></path>
-                </svg>
-            </WaveDivider>
+
+            <WaveDivider position="bottom-wave" />
+
             <JoinCTA>
                 <h3>Haven't joined yet?</h3>
                 <button onClick={() => navigate('/router/login')}>Get started</button>
             </JoinCTA>
-            <WaveDivider>
-                <svg
-                    data-name="top-wave"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                    fill="currentColor"
-                >
-                    <path
-                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                        className="shape-fill"
-                    ></path>
-                </svg>
-            </WaveDivider>
+
+            <WaveDivider position="top-wave" />
+
             <FeatureSection>
                 <div className="feature-svg-container">
                     <FollowersSVG />
@@ -195,15 +152,6 @@ const HeroCopy = styled.div`
             cursor: pointer;
         }
     }
-`
-
-const WaveDivider = styled.div`
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    color: #50fa7b;
 `
 
 const FeatureSection = styled.div`

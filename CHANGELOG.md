@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.2...v1.1.3) (2021-04-12)
+
+
+### Others
+
+* check if husky works ([4d1ddc4](https://github.com/gatsbyjs/gatsby-starter-default/commit/4d1ddc4a92e7569e022db3d30f3dc4d580590bab))
+* husky commit message linting should be working ([075fac6](https://github.com/gatsbyjs/gatsby-starter-default/commit/075fac658b7b06e762b8ad67e6b3c0fbd48f90c2))
+
 ### [1.1.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/v1.1.1...v1.1.2) (2021-04-12)
 
 

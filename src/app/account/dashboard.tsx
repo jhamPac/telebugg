@@ -7,10 +7,12 @@ export default function Account(props: RouteComponentProps): React.ReactElement 
 
     const getVersion = async () => {
         const v = await client.version()
-        console.log(v, 'BAM')
+        console.log('BAM')
     }
 
-    getVersion()
+    React.useEffect(() => {
+        getVersion()
+    })
 
     return <div>under construction</div>
 }

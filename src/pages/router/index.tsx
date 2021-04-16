@@ -79,10 +79,10 @@ export default function R() {
         <Router basepath="/router">
             <QuestionsFeed path="/top-questions" />
             <ViewQuestion path="/q/view/:questionID" />
+            <Account path="/account" />
             <Vote path="/vote" />
 
             <ProtectRoute path="/p/view" component={AskQuestion} />
-            <Account />
             <LoginCheck path="/login" component={Login} />
 
             <NoMatch default />

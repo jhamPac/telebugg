@@ -8,6 +8,6 @@ RUN apk update && apk add gcc autoconf automake libtool dpkg pkgconfig libpng li
 
 RUN npm install
 
-EXPOSE 8080
+EXPOSE 9000
 
 CMD ["npm", "start"]

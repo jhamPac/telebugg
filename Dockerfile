@@ -8,4 +8,4 @@ RUN apk update && apk add gcc autoconf automake libtool dpkg pkgconfig libpng li
 
 EXPOSE 9000
 
-CMD ["npm", "start"]
+CMD ["bash", "./main.sh"]

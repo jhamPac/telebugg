@@ -3,7 +3,14 @@ import { RouteComponentProps } from '@reach/router'
 import ipfs from 'ipfs-http-client'
 
 export default function Account(props: RouteComponentProps): React.ReactElement {
-    console.log(ipfs)
+    const client = ipfs()
+
+    const getVersion = async () => {
+        const v = await client.version()
+        console.log(v, 'BAM')
+    }
+
+    getVersion()
 
     return <div>under construction</div>
 }

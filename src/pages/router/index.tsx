@@ -82,7 +82,7 @@ export default function R() {
             <Vote path="/vote" />
 
             <ProtectRoute path="/p/view" component={AskQuestion} />
-            <ProtectRoute path="/account" component={Account} />
+            <Account />
             <LoginCheck path="/login" component={Login} />
 
             <NoMatch default />

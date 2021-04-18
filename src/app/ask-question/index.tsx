@@ -7,6 +7,7 @@ import ipfs from 'ipfs-http-client'
 
 export default function AskQuestion(props: RouteComponentProps) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
+    const [rec, setRec] = React.useState<null | Blob>(null)
     const client = ipfs({ url: 'http://localhost:5001' })
 
     const addIPFS = async blob => {
@@ -14,10 +15,23 @@ export default function AskQuestion(props: RouteComponentProps) {
         console.log(path)
     }
 
+    const getIPFS = async () => {
+        const chunks = []
+        for await (const chunk of client.cat(
+            'QmUGSWrFn1GNgyJ7w7ECG3jnoEgYqpHHdCuyE1L3vVtnJQ'
+        )) {
+            chunks.push(chunk)
+        }
+
+        const buffer = new Blob(chunks, { type: 'video/x-matroska;codecs=avc1' })
+        setRec(buffer)
+    }
+
     React.useEffect(() => {
         if (isRecording === false && recording !== null) {
             addIPFS(recording)
         }
+        getIPFS()
     }, [isRecording, recording])
 
     return (
@@ -61,11 +75,8 @@ export default function AskQuestion(props: RouteComponentProps) {
                 </div>
 
                 <Video>
-                    {recording !== null ? (
-                        <video
-                            autoPlay
-                            src={recording && window.URL.createObjectURL(recording)}
-                        />
+                    {rec !== null ? (
+                        <video autoPlay src={rec && window.URL.createObjectURL(rec)} />
                     ) : null}
                 </Video>
             </SRContainer>

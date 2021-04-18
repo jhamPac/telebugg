@@ -28,6 +28,7 @@ export default function useScreenRecording({
             })
             setCaptureStream(stream)
             const recorder = new MediaRecorder(stream)
+            console.log(recorder)
             recorder.ondataavailable = event => {
                 onEnd(event)
                 setRecording(event.data)

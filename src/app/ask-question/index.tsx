@@ -1,9 +1,25 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { RouteComponentProps } from '@reach/router'
 import useMediaRecorder from '@hooks/media/useMediaRecorder'
 
-export default function AskQuestion(props) {
+import ipfs from 'ipfs-http-client'
+
+export default function AskQuestion(props: RouteComponentProps) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
+    const client = ipfs({ url: 'http://localhost:5001' })
+
+    const addIPFS = async blob => {
+        const { path } = await client.add(blob)
+        console.log(path)
+    }
+
+    React.useEffect(() => {
+        if (isRecording === false && recording !== null) {
+            addIPFS(recording)
+        }
+    }, [isRecording, recording])
+
     return (
         <div id="post-view">
             <h2>Ask a question</h2>
@@ -22,7 +38,7 @@ export default function AskQuestion(props) {
                     />
                 </div>
             </InputsContainer>
-            <CodeBlock>
+            {/* <CodeBlock>
                 <h2>Code block</h2>
                 <iframe
                     src="https://codesandbox.io/embed/happy-curie-ok3i4?fontsize=14&hidenavigation=1&theme=dark&view=editor"
@@ -31,7 +47,7 @@ export default function AskQuestion(props) {
                     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
                     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
                 ></iframe>
-            </CodeBlock>
+            </CodeBlock> */}
             <SRContainer>
                 <div style={{ marginBottom: '32px' }}>
                     <h2>Record a screen share for better context</h2>

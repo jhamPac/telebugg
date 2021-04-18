@@ -81,8 +81,8 @@ export default function R() {
             <ViewQuestion path="/q/view/:questionID" />
             <Account path="/account" />
             <Vote path="/vote" />
+            <AskQuestion path="/p/view" />
 
-            <ProtectRoute path="/p/view" component={AskQuestion} />
             <LoginCheck path="/login" component={Login} />
 
             <NoMatch default />

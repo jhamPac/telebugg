@@ -5,8 +5,19 @@ import WaveDivider from './wave-divider'
 import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
+import { useQuery, gql } from '@apollo/client'
 
 export default function Home(): React.ReactElement {
+    const { data } = useQuery(gql`
+        {
+            result: topQuestions {
+                data
+                error
+            }
+        }
+    `)
+
+    console.log(data)
     return (
         <main id="landing-page">
             <HeroSection>

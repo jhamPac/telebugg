@@ -2,37 +2,24 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { RouteComponentProps } from '@reach/router'
 import useMediaRecorder from '@hooks/media/useMediaRecorder'
+import { gql, useMutation } from '@apollo/client'
 
-import ipfs from 'ipfs-http-client'
+const UPLOAD_RECORDING = gql`
+    mutation($file: Upload!) {
+        uploadRecording(file: $file) {
+            success
+        }
+    }
+`
 
 export default function AskQuestion(props: RouteComponentProps) {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
-    const [rec, setRec] = React.useState<null | Blob>(null)
-    const client = ipfs({ url: 'http://localhost:5001' })
+    const [mutate] = useMutation(UPLOAD_RECORDING)
 
-    const addIPFS = async blob => {
-        const { path } = await client.add(blob)
-        console.log(path)
+    const upload = async e => {
+        const { data } = await mutate({ variables: { file: recording } })
+        console.log(data, 'AFTER')
     }
-
-    const getIPFS = async () => {
-        const chunks = []
-        for await (const chunk of client.cat(
-            'QmUGSWrFn1GNgyJ7w7ECG3jnoEgYqpHHdCuyE1L3vVtnJQ'
-        )) {
-            chunks.push(chunk)
-        }
-
-        const buffer = new Blob(chunks, { type: 'video/x-matroska;codecs=avc1' })
-        setRec(buffer)
-    }
-
-    React.useEffect(() => {
-        if (isRecording === false && recording !== null) {
-            addIPFS(recording)
-        }
-        getIPFS()
-    }, [isRecording, recording])
 
     return (
         <div id="post-view">
@@ -75,10 +62,16 @@ export default function AskQuestion(props: RouteComponentProps) {
                 </div>
 
                 <Video>
-                    {rec !== null ? (
-                        <video autoPlay src={rec && window.URL.createObjectURL(rec)} />
+                    {recording !== null ? (
+                        <video
+                            autoPlay
+                            src={recording && window.URL.createObjectURL(recording)}
+                        />
                     ) : null}
                 </Video>
+                <div>
+                    <button onClick={upload}>Submit</button>
+                </div>
             </SRContainer>
         </div>
     )

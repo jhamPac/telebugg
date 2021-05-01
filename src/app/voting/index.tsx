@@ -4,7 +4,7 @@ import useContract from '@hooks/useContract'
 
 import CandidateRow from './candidate-row'
 
-export default function Voting(props: RouteComponentProps) {
+const Voting: React.FC = (props: RouteComponentProps) => {
     const [candidates, setCandidates] = React.useState<string[]>([])
     const [error, setError] = React.useState(false)
     const contract = useContract()
@@ -41,3 +41,5 @@ export default function Voting(props: RouteComponentProps) {
         </div>
     )
 }
+
+export default Voting

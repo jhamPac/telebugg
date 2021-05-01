@@ -12,13 +12,21 @@ const UPLOAD_RECORDING = gql`
     }
 `
 
-export default function AskQuestion(props: RouteComponentProps) {
+const AskQuestion = (props: RouteComponentProps): JSX.Element => {
     const { isRecording, recording, toggleRecording } = useMediaRecorder()
-    const [mutate] = useMutation(UPLOAD_RECORDING)
+    const [mutate, { loading, error }] = useMutation(UPLOAD_RECORDING)
 
     const upload = async e => {
         const { data } = await mutate({ variables: { file: recording } })
         console.log(data, 'AFTER')
+    }
+
+    if (error) {
+        return <div>Oh oh</div>
+    }
+
+    if (loading) {
+        return <div>loading</div>
     }
 
     return (
@@ -124,3 +132,5 @@ const Video = styled.div`
         }
     }
 `
+
+export default AskQuestion

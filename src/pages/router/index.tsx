@@ -9,7 +9,6 @@ import AskQuestion from '@app/ask-question'
 import Login from '@app/login'
 import QuestionsFeed from '@app/questions-feed'
 import Account from '@app/account/dashboard'
-import Vote from '@app/voting'
 
 import { useAuth } from '@hooks/auth'
 
@@ -80,7 +79,6 @@ export default function R() {
             <QuestionsFeed path="/top-questions" />
             <ViewQuestion path="/q/view/:questionID" />
             <Account path="/account" />
-            <Vote path="/vote" />
             <AskQuestion path="/p/view" />
 
             <LoginCheck path="/login" component={Login} />

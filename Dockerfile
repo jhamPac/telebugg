@@ -6,8 +6,6 @@ COPY . ./
 
 RUN apk update && apk add gcc autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++ nasm make bash
 
-RUN npm install
+EXPOSE 9000
 
-EXPOSE 8080
-
-CMD ["npm", "start"]
+CMD ["bash", "./main.sh"]

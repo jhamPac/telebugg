@@ -1,7 +1,12 @@
 import * as React from 'react'
 import { iVoteContract } from '@hooks/useContract'
 
-export default function CandidateRow(props: { name: string; contract: iVoteContract }) {
+type Props = {
+    name: string
+    contract: iVoteContract
+}
+
+const CandidateRow: React.FC<Props> = (props: Props) => {
     const [count, setCount] = React.useState(0)
 
     const syncWithBlockchain = async () => {
@@ -35,3 +40,5 @@ export default function CandidateRow(props: { name: string; contract: iVoteContr
         </div>
     )
 }
+
+export default CandidateRow

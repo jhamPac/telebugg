@@ -6,7 +6,19 @@ import AskSVG from '@assets/ask.svg'
 import ConnectSVG from '@assets/vid-connect.svg'
 import FollowersSVG from '@assets/followers.svg'
 
-export default function Home(): React.ReactElement {
+import Web3 from 'web3'
+const web3 = new Web3('http://localhost:8545')
+
+const Home: React.FC = () => {
+    React.useEffect(() => {
+        const setup = async () => {
+            const coinbase = await web3.eth.getCoinbase()
+            console.log('¥¥¥', coinbase)
+        }
+
+        setup()
+    }, [])
+
     return (
         <main id="landing-page">
             <HeroSection>
@@ -209,3 +221,5 @@ const JoinCTA = styled.div`
         cursor: pointer;
     }
 `
+
+export default Home
